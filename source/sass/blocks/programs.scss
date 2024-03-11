@@ -1,0 +1,42 @@
+@use "../mixins.scss";
+
+.programs {
+  padding: 0 20px 20px;
+  outline: 2px solid #ee82ee;
+}
+
+.programs__list {
+  @include mixins.list-reset;
+}
+
+.programs__item {
+  background-color: #f2f2f2;
+}
+
+.programs__item--slim {
+  background-image: url("../../img/cat_slim.png");
+  background-repeat: no-repeat;
+}
+
+.programs__item--pro {
+  background-image: url("../../img/cat_pro.png");
+  background-repeat: no-repeat;
+}
+
+.programs__title {
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.programs__description {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+
+.programs__link {
+  @include mixins.link-reset;
+  text-transform: uppercase;
+}

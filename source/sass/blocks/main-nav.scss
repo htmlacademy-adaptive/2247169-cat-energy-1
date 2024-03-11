@@ -1,0 +1,12 @@
+@use "../mixins.scss";
+
+.main-nav__list {
+  @include mixins.list-reset;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.main-nav__link {
+  @include mixins.link-reset;
+}

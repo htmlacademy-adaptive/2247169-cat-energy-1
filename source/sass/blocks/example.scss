@@ -1,0 +1,38 @@
+.example {
+  padding: 74px 20px 0;
+  background-color: #eaeaea;
+  outline: 2px solid #87ceeb;
+}
+
+.example__title {
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.example__description {
+  font-family: "Lato", sans-serif;
+  line-height: 18px;
+  color: #444444;
+}
+
+.example__number {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.example__details {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  color: #444444;
+  text-align: center;
+}
+
+.example__result {
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
