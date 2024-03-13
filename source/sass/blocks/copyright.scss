@@ -1,4 +1,4 @@
-@use "../mixins.scss";
+@use "../utils/mixins.scss";
 
 .copyright__text {
   @include mixins.link-reset;
