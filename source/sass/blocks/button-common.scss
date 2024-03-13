@@ -1,4 +1,7 @@
+@use "../utils/variables.scss";
+
 .button-common {
+  font-family: variables.$main-font;
   padding: 10px 63px;
   font-size: 16px;
   line-height: 20px;

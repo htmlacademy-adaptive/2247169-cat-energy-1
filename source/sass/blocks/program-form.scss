@@ -1,3 +1,10 @@
 .program-form {
-  padding: 0;
+  padding: 39px 0 32px;
+  outline: 2px solid #ee82ee;
+}
+
+.program-form__legend {
+  font-family: "Lato", sans-serif;
+  line-height: 16px;
+  text-align: center;
 }

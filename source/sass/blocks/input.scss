@@ -1,3 +1,17 @@
 .input {
-  padding: 0;
+  margin: 0;
+  padding: 13px 20px 14px;
+  outline: 2px solid #2e8b57;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
+}
+
+.input__area {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
 }
