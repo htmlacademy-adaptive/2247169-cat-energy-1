@@ -10,4 +10,9 @@
   text-transform: uppercase;
   background-color: #68b738;
   border: none;
+
+  &--secondary {
+    color: #444444;
+    background-color: #f2f2f2;
+  }
 }

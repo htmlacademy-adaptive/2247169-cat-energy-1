@@ -1,4 +1,5 @@
 @use "../utils/mixins.scss";
+@use "../utils/variables.scss";
 
 .advantages {
   padding: 0 20px 50px;
@@ -16,7 +17,7 @@
 }
 
 .advantages__item-description {
-  font-family: "Lato", sans-serif;
+  font-family: variables.$additional-font, sans-serif;
   line-height: 18px;
   color: #444444;
 }

@@ -1,3 +1,20 @@
+@use "../utils/variables.scss";
+
 .additions-card {
-  padding: 0;
+  padding: 13px 20px 19px;
+  outline: 2px solid #000080;
+}
+
+.additions-card__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.additions-card__details-item {
+  font-family: variables.$additional-font;
+  text-align: center;
 }

@@ -1,3 +1,16 @@
+@use "../utils/mixins.scss";
+
 .additions-container {
-  padding: 0;
+  padding: 25px 0 0;
+  outline: 2px solid #b22222;
+}
+
+.additions-container__title {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.additions-container__list {
+  @include mixins.list-reset;
 }
