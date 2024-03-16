@@ -1,0 +1,23 @@
+@use "../utils/variables.scss";
+
+.card-more {
+  padding: 25px 20px;
+  outline: 2px solid #0000ff;
+}
+
+.card-more__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-more__subtitle {
+  font-family: variables.$additional-font, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+  text-align: center;
+}

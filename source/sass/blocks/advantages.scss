@@ -1,0 +1,23 @@
+@use "../utils/mixins.scss";
+@use "../utils/variables.scss";
+
+.advantages {
+  padding: 0 20px 50px;
+  outline: 2px solid #ff6347;
+}
+
+.advantages__title {
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.advantages__list {
+  @include mixins.list-reset;
+}
+
+.advantages__item-description {
+  font-family: variables.$additional-font, sans-serif;
+  line-height: 18px;
+  color: #444444;
+}

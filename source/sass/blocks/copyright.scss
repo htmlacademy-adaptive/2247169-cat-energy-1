@@ -1,0 +1,10 @@
+@use "../utils/mixins.scss";
+@use "../utils/variables.scss";
+
+.copyright__text {
+  @include mixins.link-reset;
+  font-family: variables.$additional-font, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+}

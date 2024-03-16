@@ -1,0 +1,26 @@
+@use "../utils/mixins.scss";
+@use "../utils/variables.scss";
+
+.product-card {
+  padding: 20px 20px 25px;
+  outline: 2px solid #d65d00;
+}
+
+.product-card__name {
+  font-size: 16px;
+  line-height: 20px;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.product-card__details-list {
+  @include mixins.list-reset;
+}
+
+.product-card__details-item {
+  font-family: variables.$additional-font, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #444444;
+}

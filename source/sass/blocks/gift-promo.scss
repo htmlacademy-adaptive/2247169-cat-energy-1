@@ -1,0 +1,38 @@
+@use "../utils/variables.scss";
+
+.gift-promo {
+  padding: 35px 20px;
+  outline: 2px solid #000000;
+}
+
+.gift-promo__wrapper {
+  margin: 0;
+  min-height: 290px;
+  outline: 2px solid #ff0000;
+  background-image: url("../../img/gift-promo-background.png");
+  background-color: #68b738;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.gift-promo__description {
+  font-family: variables.$additional-font, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("../../img/icon_gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    right: 30px;
+    bottom: 0;
+  }
+}

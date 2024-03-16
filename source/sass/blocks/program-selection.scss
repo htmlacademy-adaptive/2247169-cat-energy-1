@@ -1,0 +1,18 @@
+@use "../utils/mixins.scss";
+
+.program-selection {
+  margin: 0;
+  padding: 22px 20px 19px;
+  outline: 2px solid #8b80f0;
+}
+
+.program-selection__list {
+  @include mixins.list-reset;
+}
+
+.radiobutton__text {
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
+}

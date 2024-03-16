@@ -1,0 +1,9 @@
+@use "../utils/mixins.scss";
+
+.product-container {
+  padding: 0;
+}
+
+.product-container__list {
+  @include mixins.list-reset;
+}

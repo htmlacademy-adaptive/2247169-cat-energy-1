@@ -1,0 +1,16 @@
+@use "../utils/mixins.scss";
+
+.additional {
+  margin: 0;
+  padding: 0 20px 34px;
+  outline: 2px solid #f50c81;
+}
+
+.additional__title {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.additional__list {
+  @include mixins.list-reset;
+}
