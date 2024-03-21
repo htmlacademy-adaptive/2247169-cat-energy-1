@@ -8,10 +8,33 @@
 
 .programs__list {
   @include mixins.list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 708px;
+    gap: 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1220px;
+    flex-direction: row;
+    gap: 80px;
+  }
 }
 
 .programs__item {
+  min-height: 266px;
   background-color: #f2f2f2;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 372px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-height: 374px;
+  }
 }
 
 .programs__item--slim {
@@ -28,6 +51,11 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .programs__description {
@@ -35,9 +63,20 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
 }
 
 .programs__link {
   @include mixins.link-reset;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

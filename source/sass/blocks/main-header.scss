@@ -1,4 +1,18 @@
+@use "../utils/variables.scss";
+
 .main-header {
   padding: 13px 20px;
   outline: 2px solid #f0e68c;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.main-header__logo {
+  display: flex;
+  gap: 56px;
 }

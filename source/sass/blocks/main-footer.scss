@@ -1,3 +1,19 @@
+@use "../utils/variables.scss";
+
 .main-footer {
   outline: 2px solid #adff2f;
+}
+
+.main-footer__contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-footer__details {
+  outline: 2px solid #2fd2ff;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }

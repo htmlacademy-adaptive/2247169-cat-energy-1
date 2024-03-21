@@ -14,10 +14,56 @@
 
 .advantages__list {
   @include mixins.list-reset;
+  display: grid;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.advantages__item {
+  min-height: 60px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 280px;
+  }
+
+  &--material {
+    @media (min-width: variables.$tablet-width) {
+      width: 230px;
+    }
+  }
+
+  &--form {
+    @media (min-width: variables.$tablet-width) {
+      width: 246px;
+    }
+  }
+
+  &--order {
+    @media (min-width: variables.$tablet-width) {
+      width: 247px;
+    }
+  }
+
+  &--results {
+    @media (min-width: variables.$tablet-width) {
+      width: 249px;
+    }
+  }
 }
 
 .advantages__item-description {
   font-family: variables.$additional-font, sans-serif;
   line-height: 18px;
   color: #444444;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

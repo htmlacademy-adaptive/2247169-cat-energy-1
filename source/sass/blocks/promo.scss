@@ -1,3 +1,5 @@
+@use "../utils/variables.scss";
+
 .promo {
   padding: 27px 35px 20px;
   outline: 2px solid #fa8072;
@@ -6,15 +8,36 @@
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
+
+  @media (min-width: variables.$tablet-width) {
+    color: #000000;
+    background-image: none;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    color: #000000;
+    background-image: url("../../img/promo-background-desktop.png");
+    background-position: top right;
+  }
 }
 
 .promo__title {
   font-size: 36px;
   line-height: 36px;
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .promo__slogan {
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

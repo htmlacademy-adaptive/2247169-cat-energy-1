@@ -1,10 +1,40 @@
 @use "../utils/mixins.scss";
+@use "../utils/variables.scss";
+
+.main-nav {
+  outline: 2px solid #ff4500;
+}
+
+.main-nav__wrapper {
+  display: flex;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    width: 436px;
+  }
+}
+
+.main-nav__toggle {
+  display: block;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+}
 
 .main-nav__list {
   @include mixins.list-reset;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 436px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 475px;
+  }
 }
 
 .main-nav__link {
