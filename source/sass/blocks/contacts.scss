@@ -1,8 +1,14 @@
 @use "../utils/variables.scss";
 
 .contacts {
-  padding: 26px 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   outline: 2px solid #ff00ff;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .contacts__title {

@@ -12,6 +12,10 @@
     display: flex;
     width: 436px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 475px;
+  }
 }
 
 .main-nav__toggle {

@@ -2,8 +2,16 @@
 @use "../utils/variables.scss";
 
 .advantages {
-  padding: 0 20px 50px;
+  padding-bottom: 50px;
   outline: 2px solid #ff6347;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 70px;
+  }
 }
 
 .advantages__title {
@@ -30,30 +38,6 @@
 
   @media (min-width: variables.$tablet-width) {
     min-height: 280px;
-  }
-
-  &--material {
-    @media (min-width: variables.$tablet-width) {
-      width: 230px;
-    }
-  }
-
-  &--form {
-    @media (min-width: variables.$tablet-width) {
-      width: 246px;
-    }
-  }
-
-  &--order {
-    @media (min-width: variables.$tablet-width) {
-      width: 247px;
-    }
-  }
-
-  &--results {
-    @media (min-width: variables.$tablet-width) {
-      width: 249px;
-    }
   }
 }
 

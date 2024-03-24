@@ -1,9 +1,28 @@
 @use "../utils/variables.scss";
 
 .example {
-  padding: 74px 20px 0;
+  padding-top: 25px;
+  padding-bottom: 40px;
   background-color: #eaeaea;
   outline: 2px solid #87ceeb;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 47px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 0;
+    padding-bottom: 75px;
+  }
+}
+
+.example__wrapper {
+  display: grid;
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .example__title {
