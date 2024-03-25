@@ -10,6 +10,12 @@
     width: 708px;
     padding-left: 30px;
     padding-right: 30px;
+
+    &--small {
+      width: 628px;
+      padding-left: 30px + 40;
+      padding-right: 30px + 40;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {

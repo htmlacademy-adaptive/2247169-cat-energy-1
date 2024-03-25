@@ -1,11 +1,19 @@
+@use "../utils/variables.scss";
+
 .input {
   margin: 0;
-  padding: 13px 20px 14px;
+  padding-top: 13px;
+  padding-bottom: 14px;
   outline: 2px solid #2e8b57;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .input__area {
