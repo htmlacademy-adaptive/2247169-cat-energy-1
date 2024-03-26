@@ -4,6 +4,12 @@
   margin: 0;
   padding: 26px 0 24px;
   outline: 2px solid #b34d4d;
+
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 80px;
+  }
 }
 
 .owner-details__title {

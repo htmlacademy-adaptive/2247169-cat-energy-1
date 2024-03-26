@@ -23,9 +23,11 @@
   @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 60px;
   }
 
   @media (min-width: variables.$desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 80px;
   }
 }

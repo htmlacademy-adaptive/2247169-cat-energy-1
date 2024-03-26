@@ -1,13 +1,64 @@
 @use "../utils/variables.scss";
 
 .program-form {
-  padding-top: 39px;
   padding-bottom: 32px;
   outline: 2px solid #ee82ee;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    grid-template-areas:
+      "input input"
+      "program program"
+      "owner owner"
+      "comments comments"
+      "additional additional"
+      "button legend";
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 80px;
+    gap: 80px;
+    grid-template-areas:
+      "input program"
+      "owner owner"
+      "comments comments"
+      "additional additional"
+      "button legend";
+  }
 }
 
 .program-form__legend {
   font-family: variables.$additional-font, sans-serif;
   line-height: 16px;
   text-align: center;
+  justify-self: flex-start;
+  grid-area: legend;
+}
+
+.program-form__input {
+  grid-area: input;
+}
+
+.program-selection {
+  grid-area: program;
+}
+
+.owner-details {
+  grid-area: owner;
+}
+
+.comments {
+  grid-area: comments;
+}
+
+.additional {
+  grid-area: additional;
+}
+
+.program-form__button {
+  width: 100%;
+  grid-area: button;
 }

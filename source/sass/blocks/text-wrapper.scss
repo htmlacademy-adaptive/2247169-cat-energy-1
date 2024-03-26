@@ -3,25 +3,37 @@
 .text-wrapper {
   padding-top: 27px;
   outline: 2px solid #ff0000;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 65px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 75px;
+  }
 }
 
 .text-wrapper__title {
-  margin: 0 0 37px 20px;
+  margin: 0 0 37px 0;
   font-size: 36px;
   line-height: 36px;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 55px 0;
     font-size: 60px;
     line-height: 60px;
   }
 }
 
 .text-wrapper__description {
-  margin: 0 0 0 20px;
+  margin: 0 0 39px 0;
+  max-width: 225px;
   line-height: 18px;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 66px 0;
+    max-width: 325px;
     font-size: 20px;
     line-height: 30px;
   }
