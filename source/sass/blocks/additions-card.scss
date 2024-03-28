@@ -3,6 +3,14 @@
 .additions-card {
   padding: 13px 20px 19px;
   outline: 2px solid #000080;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 15px 0 15px;
+  }
 }
 
 .additions-card__title {
@@ -10,11 +18,28 @@
   font-size: 16px;
   line-height: 16px;
   color: #222222;
-  text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additions-card__details-item {
   font-family: variables.$additional-font;
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.additions-card__button {
+  width: 100%;
+
+  @media (min-width: variables.$desktop-width) {
+    width: 245px;
+  }
 }

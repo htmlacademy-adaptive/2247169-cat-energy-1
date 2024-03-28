@@ -1,18 +1,32 @@
+@use "../utils/variables.scss";
+
 .comments {
   margin: 0;
-  padding: 0 20px 23px;
+  padding: 0 0 23px;
   outline: 2px solid #008080;
 }
 
 .comments__title {
   font-size: 24px;
   line-height: 26px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .comments__input {
   margin-top: 38px;
   font-family: inherit;
-  font-size: 24px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 18px;
   color: #000000;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

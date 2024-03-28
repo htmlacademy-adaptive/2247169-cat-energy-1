@@ -1,4 +1,5 @@
 @use "../utils/mixins.scss";
+@use "../utils/variables.scss";
 
 .product-container {
   padding: 0;
@@ -6,4 +7,15 @@
 
 .product-container__list {
   @include mixins.list-reset;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 80px;
+  }
 }

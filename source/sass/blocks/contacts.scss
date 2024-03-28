@@ -1,8 +1,14 @@
 @use "../utils/variables.scss";
 
 .contacts {
-  padding: 26px 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   outline: 2px solid #ff00ff;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .contacts__title {
@@ -10,10 +16,20 @@
   line-height: 20px;
   color: #111111;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__text {
   font-family: variables.$additional-font, sans-serif;
   line-height: 20px;
   color: #444444;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

@@ -11,6 +11,11 @@
   line-height: 20px;
   color: #222222;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .product-card__details-list {
@@ -23,4 +28,13 @@
   line-height: 16px;
   text-align: center;
   color: #444444;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.product-card__button {
+  width: 100%;
 }

@@ -1,20 +1,81 @@
+@use "../utils/variables.scss";
+
 .promo {
-  padding: 27px 35px 20px;
+  padding-top: 27px;
+  padding-bottom: 20px;
   outline: 2px solid #fa8072;
   color: #ffffff;
   background-image: url("../../img/promo-background.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 0;
+    color: #000000;
+    background-image: none;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 30px;
+    padding-bottom: 82px;
+    color: #000000;
+    background-image: url("../../img/promo-background-desktop.png");
+    background-position: top right;
+  }
+}
+
+.promo__wrapper {
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    justify-items: start;
+    grid-template-areas:
+      "title"
+      "slogan"
+      "button"
+      "image";
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    justify-items: start;
+    grid-template-columns: 420px 1fr;
+    grid-template-areas:
+      "title image"
+      "slogan image"
+      "button image";
+  }
 }
 
 .promo__title {
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
+  grid-area: title;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: start;
+  }
 }
 
 .promo__slogan {
   text-transform: uppercase;
   text-align: center;
+  grid-area: slogan;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.promo__image {
+  grid-area: image;
+}
+
+.promo__button {
+  grid-area: button;
 }

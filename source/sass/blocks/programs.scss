@@ -2,16 +2,45 @@
 @use "../utils/variables.scss";
 
 .programs {
-  padding: 0 20px 20px;
+  padding-bottom: 20px;
   outline: 2px solid #ee82ee;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 70px;
+  }
 }
 
 .programs__list {
   @include mixins.list-reset;
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .programs__item {
+  min-height: 266px;
   background-color: #f2f2f2;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 372px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-height: 374px;
+  }
 }
 
 .programs__item--slim {
@@ -25,9 +54,15 @@
 }
 
 .programs__title {
+  font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .programs__description {
@@ -35,9 +70,20 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
 }
 
 .programs__link {
   @include mixins.link-reset;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
