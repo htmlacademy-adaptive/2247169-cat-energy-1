@@ -18,6 +18,8 @@
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
+    width: 163px;
+    margin: 0;
     font-size: 20px;
     line-height: 26px;
   }
@@ -29,7 +31,10 @@
   color: #444444;
 
   @media (min-width: variables.$tablet-width) {
+    width: 157px;
+    margin: 0;
     font-size: 16px;
     line-height: 20px;
+    text-align: end;
   }
 }

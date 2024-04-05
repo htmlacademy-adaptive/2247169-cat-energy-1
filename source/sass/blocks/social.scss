@@ -1,10 +1,18 @@
 @use "../utils/mixins.scss";
+@use "../utils/variables.scss";
 
 .social {
   padding: 20px 74px;
   outline: 2px solid #ff69b4;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 8px 0;
+  }
 }
 
 .social__list {
   @include mixins.list-reset;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
 }

@@ -9,40 +9,42 @@
 </head>
 
 <body>
-  <header class="main-header container">
-    <div class="main-header__logo logo">
-      <a class="logo__link-img" href="index.html">
-        <img class="logo__img" src="img/logo-mobile.svg" alt="Логотип Кот Энерджи">
-      </a>
-      <a class="logo__link-text" href="index.html">
-        <img class="logo__text" src="img/logo.svg" alt="Логотип Кот Энерджи">
-      </a>
-    </div>
-    <nav class="main-header__nav main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link link link--current" href="index.html">главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">подбор программы</a>
-          </li>
-        </ul>
+  <header class="main-header">
+    <div class="main-header__wrapper container">
+      <div class="main-header__logo logo">
+        <a class="logo__link-img" href="index.html">
+          <img class="logo__img" src="img/logo-mobile.svg" alt="Логотип Кот Энерджи">
+        </a>
+        <a class="logo__link-text" href="index.html">
+          <img class="logo__text" src="img/logo.svg" alt="Логотип Кот Энерджи">
+        </a>
       </div>
-    </nav>
+      <nav class="main-header__nav main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link link" href="index.html">главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link link link--current" href="catalog.html">каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link link" href="form.html">подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main class="catalog-container">
     <section class="catalog-wrapper container">
       <h1 class="catalog-wrapper__title">Каталог продукции</h1>
 
-      <div class="product-container">
+      <div class="product-container catalog-wrapper__products">
         <ul class="product-container__list">
           <li class="product-card">
             <div class="product-card__image">
@@ -215,7 +217,7 @@
         </ul>
       </div>
 
-      <div class="additions-container">
+      <div class="additions-container catalog-wrapper__additions">
         <h2 class="additions-container__title">Дополнительные товары</h2>
         <ul class="additions-container__list">
           <li class="additions-card">
@@ -261,7 +263,7 @@
         </ul>
       </div>
 
-      <aside class="gift-promo">
+      <aside class="gift-promo catalog-wrapper__promo">
         <div class="gift-promo__wrapper">
           <p class="gift-promo__description">Закажите все и получите чехол для кота в подарок!</p>
         </div>
@@ -334,6 +336,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>

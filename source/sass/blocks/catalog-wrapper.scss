@@ -42,14 +42,14 @@
   }
 }
 
-.product-container {
+.catalog-wrapper__products {
   grid-area: products;
 }
 
-.additions-container {
+.catalog-wrapper__additions {
   grid-area: additions;
 }
 
-.gift-promo {
+.catalog-wrapper__promo {
   grid-area: gift;
 }

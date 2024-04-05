@@ -9,33 +9,35 @@
 </head>
 
 <body>
-  <header class="main-header container">
-    <div class="main-header__logo logo">
-      <a class="logo__link-img" href="index.html">
-        <img class="logo__img" src="img/logo-mobile.svg" alt="Логотип Кот Энерджи">
-      </a>
-      <a class="logo__link-text" href="index.html">
-        <img class="logo__text" src="img/logo.svg" alt="Логотип Кот Энерджи">
-      </a>
-    </div>
-    <nav class="main-header__nav main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link link link--current" href="index.html">главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">подбор программы</a>
-          </li>
-        </ul>
+  <header class="main-header">
+    <div class="main-header__wrapper container">
+      <div class="main-header__logo logo">
+        <a class="logo__link-img" href="index.html">
+          <img class="logo__img" src="img/logo-mobile.svg" alt="Логотип Кот Энерджи">
+        </a>
+        <a class="logo__link-text" href="index.html">
+          <img class="logo__text" src="img/logo.svg" alt="Логотип Кот Энерджи">
+        </a>
       </div>
-    </nav>
+      <nav class="main-header__nav main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link link" href="index.html">главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link link" href="catalog.html">каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link link link--current" href="form.html">подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main class="form-container">
@@ -60,7 +62,7 @@
           </p>
         </div>
 
-        <fieldset class="program-selection">
+        <fieldset class="program-selection program-form__selection">
           <legend class="visually-hidden">Выбор программы</legend>
           <ul class="program-selection__list">
             <li class="program-selection__item">
@@ -84,7 +86,7 @@
           </ul>
         </fieldset>
 
-        <fieldset class="owner-details">
+        <fieldset class="owner-details program-form__owner">
           <legend class="owner-details__title">Контактные данные
             (владельца кота)</legend>
           <p class="input">
@@ -97,14 +99,14 @@
           </p>
         </fieldset>
 
-        <fieldset class="comments">
+        <fieldset class="comments program-form__comments">
           <legend class="comments__title">Комментарий</legend>
           <label class="visually-hidden" for="commentaries">Комментарий</label>
           <textarea class="comments__input input" id="commentaries" name="commentaries"
             placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset class="additional">
+        <fieldset class="additional program-form___additional">
           <legend class="additional__title">Дополнительно</legend>
           <ul class="additional__list">
             <li class="additional__item">
@@ -209,6 +211,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>

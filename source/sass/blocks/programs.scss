@@ -20,7 +20,7 @@
   gap: 20px;
 
   @media (min-width: variables.$tablet-width) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 
@@ -31,50 +31,81 @@
 }
 
 .programs__item {
+  padding: 30px 33px 18px 20px;
   min-height: 266px;
   background-color: #f2f2f2;
 
   @media (min-width: variables.$tablet-width) {
-    min-height: 372px;
+    padding: 77px 316px 53px 52px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    min-height: 374px;
+    padding: 77px 61px 55px 52px;
   }
 }
 
 .programs__item--slim {
   background-image: url("../../img/cat_slim.svg");
   background-repeat: no-repeat;
+  background-position: 20px 21px;
+
+  @media (min-width: variables.$tablet-width) {
+    background-position: 445px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-position: 41px 52px;
+  }
 }
 
 .programs__item--pro {
   background-image: url("../../img/cat_pro.svg");
   background-repeat: no-repeat;
+  background-position: 12px 24px;
+
+  @media (min-width: variables.$tablet-width) {
+    background-position: 411px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-position: 47px 52px;
+  }
 }
 
 .programs__title {
+  margin: 0 0 30px 70px;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 24px 0;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 73px 162px;
   }
 }
 
 .programs__description {
+  margin: 0 0 38px 0;
   font-family: variables.$additional-font, sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 48px 0;
     font-size: 16px;
     line-height: 24px;
     color: #000000;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 23px 0;
   }
 }
 

@@ -1,28 +1,76 @@
 @use "../utils/mixins.scss";
 @use "../utils/variables.scss";
 
-.main-nav {
-  outline: 2px solid #ff4500;
+.main-nav__toggle {
+  position: absolute;
+  padding: 0;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 25px;
+    height: 1.5px;
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--opened .main-nav__wrapper {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #ffffff;
+}
+
+.main-nav--closed .main-nav__item {
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
 }
 
 .main-nav__wrapper {
-  display: flex;
-
   @media (min-width: variables.$tablet-width) {
-    display: flex;
     width: 436px;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 475px;
-  }
-}
-
-.main-nav__toggle {
-  display: block;
-
-  @media (min-width: variables.$tablet-width) {
-    display: none;
   }
 }
 
@@ -34,13 +82,49 @@
 
   @media (min-width: variables.$tablet-width) {
     width: 436px;
+    min-height: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 475px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
-.main-nav__link {
-  @include mixins.link-reset;
+.main-nav__item {
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 24px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 0 10px 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 0 8px 0;
+
+    &--current {
+      border-bottom: 2px solid #ffffff;
+    }
+  }
+}
+
+/*If JS hasn't loaded*/
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .main-nav__item {
+  display: block;
 }
