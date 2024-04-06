@@ -4,8 +4,10 @@
   outline: 2px solid #adff2f;
 }
 
-.main-footer__wrapper {
-  position: relative;
+.main-footer__contacts-desktop {
+  @media (min-width: variables.$desktop-width) {
+    position: relative;
+  }
 }
 
 .main-footer__contacts {
