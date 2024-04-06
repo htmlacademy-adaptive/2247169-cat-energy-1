@@ -5,6 +5,10 @@
   padding-bottom: 25px;
   outline: 2px solid #ff00ff;
 
+  &--form {
+    background-color: #f2f2f2;
+  }
+
   @media (min-width: variables.$tablet-width) {
     padding-top: 60px;
     padding-bottom: 60px;

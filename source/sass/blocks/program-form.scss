@@ -32,14 +32,26 @@
 
 .program-form__legend {
   font-family: variables.$additional-font, sans-serif;
+  display: block;
   line-height: 16px;
   text-align: center;
-  justify-self: flex-start;
-  grid-area: legend;
+
+  @media (min-width: variables.$tablet-width) {
+    justify-self: flex-start;
+    grid-area: legend;
+  }
 }
 
 .program-form__input {
+  padding-bottom: 24px;
+  display: grid;
+  gap: 14px;
   grid-area: input;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-bottom: 0;
+    gap: 20px;
+  }
 }
 
 .program-form__selection {

@@ -3,16 +3,21 @@
 .comments {
   margin: 0;
   padding: 0 0 23px;
-  outline: 2px solid #008080;
 }
 
 .comments__title {
+  margin: 0 0 38px;
   font-size: 24px;
   line-height: 26px;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 87px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 78px;
   }
 }
 
@@ -23,10 +28,26 @@
   line-height: 18px;
   color: #000000;
   width: 100%;
+  min-height: 150px;
+  border: 1px solid #e7e7e7;
   box-sizing: border-box;
+  padding: 0;
+
+  &::placeholder {
+    padding: 14px;
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 11px 20px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 9px 20px;
+    }
+  }
 
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    min-height: 175px;
   }
 }

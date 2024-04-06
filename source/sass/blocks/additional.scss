@@ -4,14 +4,15 @@
 .additional {
   margin: 0;
   padding: 0 0 34px;
-  outline: 2px solid #f50c81;
 }
 
 .additional__title {
+  margin: 0 0 34px;
   font-size: 24px;
   line-height: 26px;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 57px;
     font-size: 36px;
     line-height: 36px;
   }
@@ -19,9 +20,10 @@
 
 .additional__list {
   @include mixins.list-reset;
+  display: grid;
+  gap: 13px;
 
   @media (min-width: variables.$tablet-width) {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
   }

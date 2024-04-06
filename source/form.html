@@ -62,8 +62,8 @@
           </p>
         </div>
 
-        <fieldset class="program-selection program-form__selection">
-          <legend class="visually-hidden">Выбор программы</legend>
+        <section class="program-selection program-form__selection">
+          <h2 class="visually-hidden">Выбор программы</h2>
           <ul class="program-selection__list">
             <li class="program-selection__item">
               <label class="radiobutton">
@@ -84,30 +84,32 @@
               </label>
             </li>
           </ul>
-        </fieldset>
+        </section>
 
-        <fieldset class="owner-details program-form__owner">
-          <legend class="owner-details__title">Контактные данные
-            (владельца кота)</legend>
-          <p class="input">
-            <label class="input__label" for="email">E-mail:*</label>
-            <input class="input__area" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
-          </p>
-          <p class="input">
-            <label class="input__label" for="phone">Телефон:*</label>
-            <input class="input__area" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
-          </p>
-        </fieldset>
+        <section class="owner-details program-form__owner">
+          <h2 class="owner-details__title">Контактные данные
+            (владельца кота)</h2>
+          <div class="owner-details__wrapper">
+            <p class="input">
+              <label class="input__label" for="email">E-mail:*</label>
+              <input class="input__area" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
+            </p>
+            <p class="input">
+              <label class="input__label" for="phone">Телефон:*</label>
+              <input class="input__area" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
+            </p>
+          </div>
+        </section>
 
-        <fieldset class="comments program-form__comments">
-          <legend class="comments__title">Комментарий</legend>
+        <section class="comments program-form__comments">
+          <h2 class="comments__title">Комментарий</h2>
           <label class="visually-hidden" for="commentaries">Комментарий</label>
           <textarea class="comments__input input" id="commentaries" name="commentaries"
             placeholder="Расскажите обо всех повадках кота"></textarea>
-        </fieldset>
+        </section>
 
-        <fieldset class="additional program-form___additional">
-          <legend class="additional__title">Дополнительно</legend>
+        <section class="additional program-form___additional">
+          <h2 class="additional__title">Дополнительно</h2>
           <ul class="additional__list">
             <li class="additional__item">
               <label class="checkbox">
@@ -134,7 +136,7 @@
               </label>
             </li>
           </ul>
-        </fieldset>
+        </section>
 
         <button class="program-form__button button-common" type="submit">отправить заявку</button>
 
@@ -148,14 +150,21 @@
 
   <footer class="main-footer">
     <div class="main-footer__wrapper">
-      <div class="main-footer__contacts contacts container container--small">
-        <h3 class="contacts__title">приглашаем к сотрудничеству дилеров!</h3>
-        <p class="contacts__text">ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург</p>
+      <div class="main-footer__contacts-container container container--small">
+        <div class="main-footer__contacts contacts">
+          <h3 class="contacts__title">приглашаем к сотрудничеству дилеров!</h3>
+          <p class="contacts__text">ул. Большая
+            Конюшенная, д. 19/8
+            Санкт-Петербург</p>
+        </div>
       </div>
       <div class="main-footer__location location">
-        <img class="location__image" src="./img/map.png" alt="Карта с местом нахождения магазина" width="320" height="362">
+        <iframe class="location__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+        width="766"
+        height="560"
+        allowfullscreen
+        title="Адрес магазина ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
+      ></iframe>
       </div>
       <div class="main-footer__details container">
         <div class="main-footer__logo logo">

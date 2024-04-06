@@ -1,32 +1,21 @@
 @use "../utils/variables.scss";
 
-.checkbox {
+.radiobutton {
   display: flex;
-  align-items: center;
   gap: 15px;
-
-  @media (min-width: variables.$tablet-width) {
-    gap: 20px;
-  }
 }
 
-.checkbox__input {
+.radiobutton__input {
   margin: 0;
   width: 30px;
-  height: 30px;
-
-  @media (min-width: variables.$tablet-width) {
-    width: 40px;
-    height: 40px;
-  }
 }
 
-.checkbox__text {
+.radiobutton__text {
+  padding: 6px 0;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
-  padding: 6px 0;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;

@@ -1,10 +1,10 @@
 @use "../utils/variables.scss";
 
 .input {
+  display: flex;
+  gap: 13px;
+  align-items: center;
   margin: 0;
-  padding-top: 13px;
-  padding-bottom: 14px;
-  outline: 2px solid #2e8b57;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
@@ -17,9 +17,18 @@
 }
 
 .input__area {
+  flex-grow: 1;
+  padding: 14px 15px 13px;
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
+  border: 1px solid #e7e7e7;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 11px 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
