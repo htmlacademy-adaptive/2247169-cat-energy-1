@@ -16,7 +16,17 @@
   }
 }
 
-.input__area {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+.input__control {
   flex-grow: 1;
   padding: 14px 15px 13px;
   font-family: inherit;
@@ -25,6 +35,15 @@
   color: #444444;
   text-transform: uppercase;
   border: 1px solid #e7e7e7;
+  resize: vertical;
+
+  &--commentaries {
+    min-height: 150px;
+
+    @media (min-width: variables.$tablet-width) {
+      min-height: 175px;
+    }
+  }
 
   @media (min-width: variables.$tablet-width) {
     padding: 11px 20px;

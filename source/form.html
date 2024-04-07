@@ -50,15 +50,15 @@
         <div class="program-form__input">
           <p class="input">
             <label class="input__label" for="name">Имя:*</label>
-            <input class="input__area" id="name" type="text" name="name" placeholder="Барсик">
+            <input class="input__control" id="name" type="text" name="name" placeholder="Барсик">
           </p>
           <p class="input">
             <label class="input__label" for="weight">Вес (кг):*</label>
-            <input class="input__area" id="weight" type="number" name="weight" placeholder="7">
+            <input class="input__control" id="weight" type="number" name="weight" placeholder="7">
           </p>
           <p class="input">
             <label class="input__label" for="age">Возраст (лет):</label>
-            <input class="input__area" id="age" type="number" name="age" placeholder="7">
+            <input class="input__control" id="age" type="number" name="age" placeholder="7">
           </p>
         </div>
 
@@ -67,19 +67,22 @@
           <ul class="program-selection__list">
             <li class="program-selection__item">
               <label class="radiobutton">
-                <input class="radiobutton__input" type="radio" name="program" value="weight-loss" checked>
+                <input class="radiobutton__input visually-hidden" type="radio" name="program" value="weight-loss" checked>
+                <span class="radiobutton__mark"></span>
                 <span class="radiobutton__text">Похудение</span>
               </label>
             </li>
             <li class="program-selection__item">
               <label class="radiobutton">
-                <input class="radiobutton__input" type="radio" name="program" value="weight-gain">
+                <input class="radiobutton__input visually-hidden" type="radio" name="program" value="weight-gain">
+                <span class="radiobutton__mark"></span>
                 <span class="radiobutton__text">Набор массы</span>
               </label>
             </li>
             <li class="program-selection__item">
               <label class="radiobutton">
-                <input class="radiobutton__input" type="radio" name="program" value="need-advice">
+                <input class="radiobutton__input visually-hidden" type="radio" name="program" value="need-advice">
+                <span class="radiobutton__mark"></span>
                 <span class="radiobutton__text">Не знаю (Нужен ваш совет)</span>
               </label>
             </li>
@@ -92,20 +95,21 @@
           <div class="owner-details__wrapper">
             <p class="input">
               <label class="input__label" for="email">E-mail:*</label>
-              <input class="input__area" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
+              <input class="input__control" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
             </p>
             <p class="input">
               <label class="input__label" for="phone">Телефон:*</label>
-              <input class="input__area" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
+              <input class="input__control" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
             </p>
           </div>
         </section>
 
         <section class="comments program-form__comments">
           <h2 class="comments__title">Комментарий</h2>
-          <label class="visually-hidden" for="commentaries">Комментарий</label>
-          <textarea class="comments__input input" id="commentaries" name="commentaries"
-            placeholder="Расскажите обо всех повадках кота"></textarea>
+          <p class="input">
+            <label class="input__label visually-hidden" for="commentaries">Расскажите обо всех повадках кота</label>
+            <textarea class="input__control input__control--commentaries" id="commentaries" type="text" name="commentaries" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </p>
         </section>
 
         <section class="additional program-form___additional">
@@ -113,25 +117,29 @@
           <ul class="additional__list">
             <li class="additional__item">
               <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" name="additional-option" value="sweetener" checked>
+                <input class="checkbox__input visually-hidden" type="checkbox" name="additional-option" value="sweetener" checked>
+                <span class="checkbox__mark"></span>
                 <span class="checkbox__text">Сахарозаменитель</span>
               </label>
             </li>
             <li class="additional__item">
               <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" name="additional-option" value="water">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="additional-option" value="water">
+                <span class="checkbox__mark"></span>
                 <span class="checkbox__text">Питьевая вода</span>
               </label>
             </li>
             <li class="additional__item">
               <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" name="additional-option" value="milk">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="additional-option" value="milk">
+                <span class="checkbox__mark"></span>
                 <span class="checkbox__text">Молоко</span>
               </label>
             </li>
             <li class="additional__item">
               <label class="checkbox">
-                <input class="checkbox__input" type="checkbox" name="additional-option" value="vitamins">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="additional-option" value="vitamins">
+                <span class="checkbox__mark"></span>
                 <span class="checkbox__text">Витамины</span>
               </label>
             </li>

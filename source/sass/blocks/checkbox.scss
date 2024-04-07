@@ -1,19 +1,41 @@
 @use "../utils/variables.scss";
 
 .checkbox {
+  padding-left: 45px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 15px;
+  position: relative;
 
   @media (min-width: variables.$tablet-width) {
-    gap: 20px;
+    padding-left: 60px;
   }
 }
 
-.checkbox__input {
-  margin: 0;
+.checkbox__input[type="checkbox"]:checked + .checkbox__mark::after {
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  width: 18px;
+  height: 14px;
+  content: url("../../img/checkbox-mobile.svg");
+
+  @media (min-width: variables.$tablet-width) {
+    top: 10px;
+    left: 8px;
+    width: 24px;
+    height: 18px;
+    content: url("../../img/checkbox-tablet.svg");
+  }
+}
+
+.checkbox__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 30px;
   height: 30px;
+  border: 1px solid #cdcdcd;
 
   @media (min-width: variables.$tablet-width) {
     width: 40px;
