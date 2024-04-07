@@ -16,13 +16,7 @@
   }
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
+.input__control[type="number"] {
   appearance: textfield;
 }
 
@@ -36,6 +30,12 @@ input[type="number"] {
   text-transform: uppercase;
   border: 1px solid #e7e7e7;
   resize: vertical;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
 
   &--commentaries {
     min-height: 150px;
