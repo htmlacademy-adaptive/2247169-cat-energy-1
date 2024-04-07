@@ -20,7 +20,8 @@
 
   @media (min-width: variables.$desktop-width) {
     padding-bottom: 80px;
-    gap: 80px;
+    column-gap: 80px;
+    row-gap: 70px;
     grid-template-areas:
       "input program"
       "owner owner"
@@ -35,9 +36,12 @@
   display: block;
   line-height: 16px;
   text-align: center;
+  margin-top: 20px;
 
   @media (min-width: variables.$tablet-width) {
+    margin-top: 0;
     justify-self: flex-start;
+    align-self: center;
     grid-area: legend;
   }
 }
