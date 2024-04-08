@@ -36,6 +36,8 @@
   width: 30px;
   height: 30px;
   border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+  cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
     width: 40px;
