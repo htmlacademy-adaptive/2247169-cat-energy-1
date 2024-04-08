@@ -3,7 +3,6 @@
 
 .additions-container {
   padding: 25px 0 0;
-  outline: 2px solid #b22222;
 }
 
 .additions-container__title {
@@ -25,4 +24,11 @@
 
 .additions-container__list {
   @include mixins.list-reset;
+  border: 1px solid #cdcdcd;
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 87px;
+    border-left: none;
+    border-right: none;
+  }
 }

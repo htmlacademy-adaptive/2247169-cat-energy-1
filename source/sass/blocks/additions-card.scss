@@ -2,33 +2,78 @@
 
 .additions-card {
   padding: 13px 20px 19px;
-  outline: 2px solid #000080;
 
   @media (min-width: variables.$tablet-width) {
     padding: 26px 38px 28px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #cdcdcd;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
     padding: 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.additions-card__info {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 570px;
+    align-items: center;
   }
 }
 
 .additions-card__title {
-  margin: 0;
+  margin: 0 0 13px;
   font-size: 16px;
   line-height: 16px;
   color: #222222;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 25px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+  }
+}
+
+.additions-card__details-wrapper {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: variables.$tablet-width) {
+    gap: 55px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+    gap: 0;
   }
 }
 
 .additions-card__details-item {
   font-family: variables.$additional-font;
   text-align: center;
+
+  &:first-child {
+    @media (min-width: variables.$desktop-width) {
+      width: 235px;
+      text-align: start;
+    }
+  }
 
   @media (min-width: variables.$tablet-width) {
     font-size: 16px;
