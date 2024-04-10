@@ -19,8 +19,8 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    padding: 0 37px 40px;
-    background-color: #f2f2f2;
+    padding: 10px 37px 40px;
+    background: linear-gradient(transparent 80px, #f2f2f2 80px);
     border-bottom: none;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -34,15 +34,25 @@
   align-self: center;
   justify-self: center;
   grid-area: image;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 20px;
+    width: 200px;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 20px;
+    width: 169px;
+  }
 }
 
 .product-card__info {
   margin-bottom: 20px;
   grid-area: info;
-
-  @media (min-width: variables.$tablet-width) {
-    margin-bottom: 32px;
-  }
 }
 
 .product-card__name {
@@ -55,10 +65,14 @@
 
   @media (min-width: variables.$tablet-width) {
     width: 135px;
-    margin: 0 0 20px;
+    margin: 0 auto 20px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 auto 23px;
   }
 }
 

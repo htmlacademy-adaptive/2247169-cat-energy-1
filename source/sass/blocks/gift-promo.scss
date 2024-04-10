@@ -1,14 +1,14 @@
 @use "../utils/variables.scss";
 
 .gift-promo {
-  padding: 35px 20px;
+  padding: 35px 0;
 
   @media (min-width: variables.$tablet-width) {
     padding: 70px 0 75px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 0 87px;
+    padding: 0;
   }
 }
 
@@ -26,6 +26,14 @@
   background-position: center;
   background-size: cover;
   position: relative;
+
+
+  &::before {
+    content: "";
+    background-image: url("../../img/icon_gift.svg");
+    width: 78px;
+    height: 80px;
+  }
 
   @media (min-width: variables.$tablet-width) {
     min-height: 200px;

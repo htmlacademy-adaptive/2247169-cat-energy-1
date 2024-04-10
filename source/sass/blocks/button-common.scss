@@ -2,17 +2,19 @@
 
 .button-common {
   font-family: variables.$main-font;
-  padding: 10px 63px;
+  padding: 10px 0;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   background-color: #68b738;
   border: none;
+  display: block;
 
   &--secondary {
-    padding: 10px 39px;
+    padding: 10px 0;
     color: #444444;
     background-color: #f2f2f2;
   }

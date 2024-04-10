@@ -84,6 +84,7 @@
   grid-area: title;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 40px;
     max-width: 420px;
     font-size: 60px;
     line-height: 60px;
@@ -98,8 +99,13 @@
   grid-area: slogan;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 50px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 52px;
   }
 }
 
@@ -109,4 +115,11 @@
 
 .promo__button {
   grid-area: button;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 14px 0;
+    width: 244px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }

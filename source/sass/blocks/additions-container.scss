@@ -3,6 +3,22 @@
 
 .additions-container {
   padding: 25px 0 0;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 70px 0 75px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 76px 0 87px;
+  }
+}
+
+.additions-container__wrapper {
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 80px;
+  }
 }
 
 .additions-container__title {
@@ -24,10 +40,12 @@
 
 .additions-container__list {
   @include mixins.list-reset;
-  border: 1px solid #cdcdcd;
+
+  @media (min-width: variables.$tablet-width) {
+    border: 1px solid #cdcdcd;
+  }
 
   @media (min-width: variables.$desktop-width) {
-    padding-bottom: 87px;
     border-left: none;
     border-right: none;
   }

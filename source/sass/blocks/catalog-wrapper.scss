@@ -6,25 +6,10 @@
 
   @media (min-width: variables.$tablet-width) {
     padding: 65px 0 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    grid-template-areas:
-      "title title"
-      "products products"
-      "additions additions"
-      "gift gift";
   }
 
   @media (min-width: variables.$desktop-width) {
     padding: 75px 0 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 80px;
-    grid-template-areas:
-      "title title title title"
-      "products products products products"
-      "additions additions additions gift";
   }
 }
 
@@ -33,27 +18,10 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  grid-area: title;
 
   @media (min-width: variables.$tablet-width) {
     margin: 0 0 84px 0;
     font-size: 60px;
     line-height: 60px;
-  }
-}
-
-.catalog-wrapper__products {
-  grid-area: products;
-}
-
-.catalog-wrapper__additions {
-  grid-area: additions;
-}
-
-.catalog-wrapper__promo {
-  grid-area: gift;
-
-  @media (min-width: variables.$desktop-width) {
-    align-self: flex-end;
   }
 }
