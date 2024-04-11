@@ -1,15 +1,21 @@
 @use "../utils/variables.scss";
 
 .contacts {
+  width: 280px;
   padding-top: 25px;
   padding-bottom: 25px;
   outline: 2px solid #ff00ff;
 
-  &--form {
+  &--grey {
     background-color: #f2f2f2;
   }
 
+  &--white {
+    background-color: #ffffff;
+  }
+
   @media (min-width: variables.$tablet-width) {
+    width: 628px;
     padding-top: 60px;
     padding-bottom: 60px;
   }
