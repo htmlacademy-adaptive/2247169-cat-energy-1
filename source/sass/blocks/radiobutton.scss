@@ -1,10 +1,8 @@
 @use "../utils/variables.scss";
 
-.checkbox {
+.radiobutton {
   padding-left: 45px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
   cursor: pointer;
 
@@ -13,30 +11,19 @@
   }
 }
 
-.checkbox__input[type="checkbox"]:checked + .checkbox__mark::after {
-  position: absolute;
-  top: 6px;
-  left: 4px;
-  width: 18px;
-  height: 14px;
-  content: url("../../img/checkbox-mobile.svg");
-
-  @media (min-width: variables.$tablet-width) {
-    top: 10px;
-    left: 8px;
-    width: 24px;
-    height: 18px;
-    content: url("../../img/checkbox-tablet.svg");
-  }
+.radiobutton__input {
+  margin: 0;
+  width: 30px;
 }
 
-.checkbox__mark {
+.radiobutton__mark {
   position: absolute;
   top: 0;
   left: 0;
   width: 30px;
   height: 30px;
   border: 1px solid #cdcdcd;
+  border-radius: 50%;
   box-sizing: border-box;
 
   @media (min-width: variables.$tablet-width) {
@@ -45,12 +32,30 @@
   }
 }
 
-.checkbox__text {
+.radiobutton__input[type="radio"]:checked + .radiobutton__mark::after {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 13px;
+  height: 13px;
+  background-color: #68b738;
+  border-radius: 50%;
+  content: "";
+
+  @media (min-width: variables.$tablet-width) {
+    top: 11px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.radiobutton__text {
+  padding: 6px 0;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
-  padding: 6px 0;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;

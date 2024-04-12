@@ -1,26 +1,45 @@
 @use "../utils/variables.scss";
 
 .main-header {
+  min-height: 38px;
   padding-top: 13px;
   padding-bottom: 13px;
-  outline: 2px solid #f0e68c;
-  display: flex;
-  flex-direction: column;
+  position: relative;
 
   @media (min-width: variables.$tablet-width) {
+    min-height: 50px;
     padding-top: 25px;
     padding-bottom: 0;
-    flex-direction: row;
-    justify-content: space-between;
   }
 
   @media (min-width: variables.$desktop-width) {
+    min-height: 59px;
     padding-top: 55px;
-    padding-bottom: 0;
+
+    &--index {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding-bottom: 0;
+      z-index: 1;
+    }
   }
+}
+
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-header__logo {
   display: flex;
+  align-items: center;
   gap: 56px;
+}
+
+.main-header__nav {
+  @media (min-width: variables.$tablet-width) {
+    align-self: flex-end;
+  }
 }

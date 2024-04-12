@@ -2,7 +2,6 @@
 
 .program-form {
   padding-bottom: 32px;
-  outline: 2px solid #ee82ee;
 
   @media (min-width: variables.$tablet-width) {
     padding-bottom: 60px;
@@ -20,7 +19,8 @@
 
   @media (min-width: variables.$desktop-width) {
     padding-bottom: 80px;
-    gap: 80px;
+    column-gap: 80px;
+    row-gap: 70px;
     grid-template-areas:
       "input program"
       "owner owner"
@@ -32,29 +32,44 @@
 
 .program-form__legend {
   font-family: variables.$additional-font, sans-serif;
+  display: block;
   line-height: 16px;
   text-align: center;
-  justify-self: flex-start;
-  grid-area: legend;
+  margin-top: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 0;
+    justify-self: flex-start;
+    align-self: center;
+    grid-area: legend;
+  }
 }
 
 .program-form__input {
+  padding-bottom: 24px;
+  display: grid;
+  gap: 14px;
   grid-area: input;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-bottom: 0;
+    gap: 20px;
+  }
 }
 
-.program-selection {
+.program-form__selection {
   grid-area: program;
 }
 
-.owner-details {
+.program-form__owner {
   grid-area: owner;
 }
 
-.comments {
+.program-form__comments {
   grid-area: comments;
 }
 
-.additional {
+.program-form___additional {
   grid-area: additional;
 }
 

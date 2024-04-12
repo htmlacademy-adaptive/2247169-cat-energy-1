@@ -1,35 +1,69 @@
 @use "../utils/variables.scss";
 
 .contacts {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  outline: 2px solid #ff00ff;
+  padding: 25px 20px;
+  background-color: #f2f2f2;
+
+  &--index {
+    background-color: #ffffff;
+  }
 
   @media (min-width: variables.$tablet-width) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 70px;
+  }
+}
+
+.contacts__container {
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 628px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 411px;
   }
 }
 
 .contacts__title {
+  width: 140px;
+  margin: 0;
   font-size: 16px;
   line-height: 20px;
   color: #111111;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
+    width: 163px;
+    margin: 0;
     font-size: 20px;
     line-height: 26px;
   }
 }
 
 .contacts__text {
+  width: 140px;
+  margin: 0;
   font-family: variables.$additional-font, sans-serif;
   line-height: 20px;
   color: #444444;
 
   @media (min-width: variables.$tablet-width) {
+    width: 157px;
+    margin: 0;
     font-size: 16px;
     line-height: 20px;
+    text-align: end;
+  }
+}
+
+.contacts__small-text {
+  @media (min-width: variables.$desktop-width) {
+    display: block;
+    margin-top: 20px;
   }
 }

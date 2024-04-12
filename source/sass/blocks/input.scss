@@ -1,10 +1,10 @@
 @use "../utils/variables.scss";
 
 .input {
+  display: flex;
+  gap: 13px;
+  align-items: center;
   margin: 0;
-  padding-top: 13px;
-  padding-bottom: 14px;
-  outline: 2px solid #2e8b57;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
@@ -16,10 +16,68 @@
   }
 }
 
-.input__area {
+.input__control[type="number"] {
+  appearance: textfield;
+}
+
+.input__control {
+  flex-grow: 1;
+  padding: 14px 15px 13px;
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
+  border: 1px solid #e7e7e7;
+  resize: vertical;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 11px 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--email {
+    padding: 14px 40px 13px 15px;
+    background-image: url("../../img/email-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center right 15px;
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 14px 50px 13px 15px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      background-position: center right 17px;
+    }
+  }
+
+  &--phone {
+    padding: 14px 40px 13px 15px;
+    background-image: url("../../img/phone-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center right 15px;
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 14px 50px 13px 15px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      background-position: center right 17px;
+    }
+  }
+
+  &--commentaries {
+    min-height: 150px;
+
+    @media (min-width: variables.$tablet-width) {
+      min-height: 175px;
+    }
+  }
 }

@@ -4,51 +4,99 @@
   padding-top: 25px;
   padding-bottom: 40px;
   background-color: #eaeaea;
-  outline: 2px solid #87ceeb;
 
   @media (min-width: variables.$tablet-width) {
     padding-top: 47px;
     padding-bottom: 100px;
+    background: linear-gradient(transparent 525px, #eaeaea 525px);
   }
 
   @media (min-width: variables.$desktop-width) {
     padding-top: 0;
     padding-bottom: 75px;
+    background: linear-gradient(transparent 135px, #eaeaea 135px);
   }
 }
 
 .example__wrapper {
   display: grid;
+  align-items: center;
+  justify-items: center;
 
   @media (min-width: variables.$desktop-width) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 436px 1fr;
   }
 }
 
 .example__title {
+  margin: 0 0 40px 0;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  text-align: center;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 60px 0;
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 145px 0;
   }
 }
 
 .example__description {
+  margin: 0 0 20px 0;
   font-family: variables.$additional-font, sans-serif;
   line-height: 18px;
   color: #444444;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 55px 0;
     font-size: 16px;
     line-height: 24px;
   }
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 69px 0;
+  }
+}
+
+.example__data {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    flex-direction: column;
+    gap: 55px;
+  }
+}
+
+.example__list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 124px 124px;
+  gap: 32px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: 162px 162px;
+    gap: 42px;
+  }
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 }
 
 .example__number {
+  margin: 14px 0 17px;
   font-size: 24px;
   line-height: 24px;
   text-align: center;
@@ -61,15 +109,22 @@
 }
 
 .example__details {
+  width: 87px;
   font-family: variables.$additional-font, sans-serif;
   font-size: 12px;
   line-height: 12px;
   color: #444444;
   text-align: center;
+  background-color: #eaeaea;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 14px;
     line-height: 14px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-color: #eaeaea;
   }
 }
 
@@ -79,7 +134,16 @@
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
+    width: 175px;
+    margin: 0 0 0 auto;
     font-size: 20px;
     line-height: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 100%;
+    margin: 0;
+    text-align: start;
   }
 }

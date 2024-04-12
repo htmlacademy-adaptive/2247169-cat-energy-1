@@ -2,24 +2,93 @@
 @use "../utils/variables.scss";
 
 .product-card {
-  padding: 20px 20px 25px;
-  outline: 2px solid #d65d00;
+  padding: 20px 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "image info"
+    "button button";
+  border-bottom: 1px solid #ebebeb;
+
+  &:first-child {
+    border-top: 1px solid #ebebeb;
+
+    @media (min-width: variables.$tablet-width) {
+      border-top: none;
+    }
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 10px 37px 40px;
+    background: linear-gradient(transparent 80px, #f2f2f2 80px);
+    border-bottom: none;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "info"
+      "button";
+  }
+}
+
+.product-card__image {
+  align-self: center;
+  justify-self: center;
+  grid-area: image;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 20px;
+    width: 200px;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 20px;
+    width: 169px;
+  }
+}
+
+.product-card__info {
+  margin-bottom: 20px;
+  grid-area: info;
 }
 
 .product-card__name {
+  width: 76px;
+  margin: 0 0 14px;
   font-size: 16px;
   line-height: 20px;
   color: #222222;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
+    width: 135px;
+    margin: 0 auto 20px;
     font-size: 20px;
     line-height: 24px;
+    text-align: center;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 auto 23px;
   }
 }
 
 .product-card__details-list {
   @include mixins.list-reset;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.product-card__details-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .product-card__details-item {
@@ -37,4 +106,5 @@
 
 .product-card__button {
   width: 100%;
+  grid-area: button;
 }

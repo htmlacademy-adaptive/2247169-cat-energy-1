@@ -3,7 +3,6 @@
 
 .advantages {
   padding-bottom: 50px;
-  outline: 2px solid #ff6347;
 
   @media (min-width: variables.$tablet-width) {
     padding-bottom: 47px;
@@ -15,18 +14,21 @@
 }
 
 .advantages__title {
+  margin: 0 0 40px 0;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  text-align: center;
 }
 
 .advantages__list {
   @include mixins.list-reset;
   display: grid;
+  gap: 20px;
 
   @media (min-width: variables.$tablet-width) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 325px 1fr;
+    gap: 40px;
+    counter-reset: li;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -36,19 +38,56 @@
 
 .advantages__item {
   min-height: 60px;
+  background-repeat: no-repeat;
+  position: relative;
 
   @media (min-width: variables.$tablet-width) {
     min-height: 280px;
+    background-position-y: 40px;
+    counter-increment: li;
+
+    &::after {
+      content: counter(li);
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      position: absolute;
+      top: 0;
+      left: 100px;
+      z-index: -1;
+    }
+  }
+
+  &--material {
+    background-image: url("../../img/advantages-material.svg");
+  }
+
+  &--form {
+    background-image: url("../../img/advantages-form.svg");
+  }
+
+  &--order {
+    background-image: url("../../img/advantages-order.svg");
+  }
+
+  &--results {
+    background-image: url("../../img/advantages-results.svg");
   }
 }
 
 .advantages__item-description {
   font-family: variables.$additional-font, sans-serif;
+  margin: 0 0 0 80px;
   line-height: 18px;
   color: #444444;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 151px 80px 0 0;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 151px 7px 0 0;
   }
 }

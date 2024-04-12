@@ -3,12 +3,23 @@
 .promo {
   padding-top: 27px;
   padding-bottom: 20px;
-  outline: 2px solid #fa8072;
   color: #ffffff;
-  background-image: url("../../img/promo-background.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
+  position: relative;
+
+  @media (max-width: variables.$mobile-width-only) {
+    &::after {
+      content: "";
+      position: absolute;
+      height: 302px;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/promo-background.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
 
   @media (min-width: variables.$tablet-width) {
     padding-top: 65px;
@@ -18,15 +29,31 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-top: 30px;
+    height: 550px;
+    padding-top: 225px;
     padding-bottom: 82px;
-    color: #000000;
-    background-image: url("../../img/promo-background-desktop.png");
     background-position: top right;
+    background-size: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 694px;
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/promo-background-desktop.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
   }
 }
 
 .promo__wrapper {
+  position: relative;
+  z-index: 1;
+
   @media (min-width: variables.$tablet-width) {
     display: grid;
     justify-items: start;
@@ -48,6 +75,7 @@
 }
 
 .promo__title {
+  margin: 0 0 25px;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
@@ -55,6 +83,8 @@
   grid-area: title;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 40px;
+    max-width: 420px;
     font-size: 60px;
     line-height: 60px;
     text-align: start;
@@ -62,13 +92,19 @@
 }
 
 .promo__slogan {
+  margin: 0 0 29px;
   text-transform: uppercase;
   text-align: center;
   grid-area: slogan;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 50px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 52px;
   }
 }
 
@@ -78,4 +114,11 @@
 
 .promo__button {
   grid-area: button;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 14px 0;
+    width: 244px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }

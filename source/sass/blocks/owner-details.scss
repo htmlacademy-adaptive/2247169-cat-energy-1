@@ -3,21 +3,28 @@
 .owner-details {
   margin: 0;
   padding: 26px 0 24px;
-  outline: 2px solid #b34d4d;
-
-  @media (min-width: variables.$desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-  }
+  border: none;
 }
 
 .owner-details__title {
   font-size: 24px;
   line-height: 26px;
+  margin: 0 0 35px;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin: 0 0 76px;
+  }
+}
+
+.owner-details__wrapper {
+  display: grid;
+  gap: 14px;
+
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
   }
 }
