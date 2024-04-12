@@ -6,21 +6,35 @@
 
   @media (min-width: variables.$tablet-width) {
     &--current {
-      border-bottom: 2px solid #68b738;
-    }
+      position: relative;
 
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+        left: 0;
+        height: 2px;
+        background: #68b738;
+      }
     }
   }
 
   @media (min-width: variables.$desktop-width) {
     &--main {
       color: #ffffff;
+
+      &::after {
+        background: #ffffff;
+      }
     }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
