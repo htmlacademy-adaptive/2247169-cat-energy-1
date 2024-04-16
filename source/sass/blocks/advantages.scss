@@ -59,19 +59,35 @@
   }
 
   &--material {
-    background-image: url("../../img/advantages-material.svg");
+    background-image: url("../../img/index-advantages/advantages-material.svg");
+
+    @media (min-width: variables.$tablet-width) {
+      background-image: url("../../img/index-advantages/advantages-material-tablet.svg");
+    }
   }
 
   &--form {
-    background-image: url("../../img/advantages-form.svg");
+    background-image: url("../../img/index-advantages/advantages-form.svg");
+
+    @media (min-width: variables.$tablet-width) {
+      background-image: url("../../img/index-advantages/advantages-form-tablet.svg");
+    }
   }
 
   &--order {
-    background-image: url("../../img/advantages-order.svg");
+    background-image: url("../../img/index-advantages/advantages-order.svg");
+
+    @media (min-width: variables.$tablet-width) {
+      background-image: url("../../img/index-advantages/advantages-order-tablet.svg");
+    }
   }
 
   &--results {
-    background-image: url("../../img/advantages-results.svg");
+    background-image: url("../../img/index-advantages/advantages-results.svg");
+
+    @media (min-width: variables.$tablet-width) {
+      background-image: url("../../img/index-advantages/advantages-results-tablet.svg");
+    }
   }
 }
 

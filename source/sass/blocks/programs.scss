@@ -44,29 +44,33 @@
 }
 
 .programs__item--slim {
-  background-image: url("../../img/cat_slim.svg");
+  background-image: url("../../img/index-programs/cat_slim.svg");
   background-repeat: no-repeat;
   background-position: 20px 21px;
 
   @media (min-width: variables.$tablet-width) {
+    background-image: url("../../img/index-programs/cat-slim-tablet.svg");
     background-position: 445px;
   }
 
   @media (min-width: variables.$desktop-width) {
+    background-image: url("../../img/index-programs/cat-slim-desktop.svg");
     background-position: 41px 52px;
   }
 }
 
 .programs__item--pro {
-  background-image: url("../../img/cat_pro.svg");
+  background-image: url("../../img/index-programs/cat_pro.svg");
   background-repeat: no-repeat;
   background-position: 12px 24px;
 
   @media (min-width: variables.$tablet-width) {
+    background-image: url("../../img/index-programs/cat-pro-tablet.svg");
     background-position: 411px;
   }
 
   @media (min-width: variables.$desktop-width) {
+    background-image: url("../../img/index-programs/cat-pro-desktop.svg");
     background-position: 47px 52px;
   }
 }
