@@ -33,9 +33,21 @@
 
   &::before {
     content: "";
-    background-image: url("../../img/icon_gift.svg");
+    background-image: url("../../img/catalog-promo/icon-gift.svg");
     width: 78px;
     height: 80px;
+
+    @media (min-width: variables.$tablet-width) {
+      background-image: url("../../img/catalog-promo/icon-gift-tablet.svg");
+      width: 80px;
+      height: 82px;
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      background-image: url("../../img/catalog-promo/icon-gift-desktop.svg");
+      width: 80px;
+      height: 83px;
+    }
   }
 
   @media (min-width: variables.$tablet-width) {
@@ -53,11 +65,10 @@
     min-height: 288px;
     padding: 56px 42px 43px 42px;
     flex-direction: column;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog-promo/gift-promo.png");
-    background-position: right;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog-promo/gift-promo-desktop.png");
 
     @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog-promo/gift-promo@2x.png");
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog-promo/gift-promo-desktop@2x.png");
     }
   }
 }
