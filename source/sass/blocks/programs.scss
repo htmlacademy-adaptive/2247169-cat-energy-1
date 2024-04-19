@@ -115,9 +115,13 @@
 .programs__link {
   @include mixins.link-reset;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    gap: 25px;
   }
 }
