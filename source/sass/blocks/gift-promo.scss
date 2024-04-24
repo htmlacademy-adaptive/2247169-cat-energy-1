@@ -21,30 +21,30 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog-promo/gift-promo.png");
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog-promo/gift-promo.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
 
   @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog-promo/gift-promo@2x.png");
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog-promo/gift-promo@2x.png");
   }
 
   &::before {
     content: "";
-    background-image: url("../../img/catalog-promo/icon-gift.svg");
+    background-image: url("../img/catalog-promo/icon-gift.svg");
     width: 78px;
     height: 80px;
 
     @media (min-width: variables.$tablet-width) {
-      background-image: url("../../img/catalog-promo/icon-gift-tablet.svg");
+      background-image: url("../img/catalog-promo/icon-gift-tablet.svg");
       width: 80px;
       height: 82px;
     }
 
     @media (min-width: variables.$tablet-width) {
-      background-image: url("../../img/catalog-promo/icon-gift-desktop.svg");
+      background-image: url("../img/catalog-promo/icon-gift-desktop.svg");
       width: 80px;
       height: 83px;
     }
@@ -54,10 +54,10 @@
     min-height: 200px;
     padding: 57px 125px 60px 77px;
     flex-direction: row;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog-promo/gift-promo-tablet.png");
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog-promo/gift-promo-tablet.png");
 
     @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog-promo/gift-promo-tablet@2x.png");
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog-promo/gift-promo-tablet@2x.png");
     }
   }
 
@@ -65,10 +65,10 @@
     min-height: 288px;
     padding: 56px 42px 43px 42px;
     flex-direction: column;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog-promo/gift-promo-desktop.png");
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog-promo/gift-promo-desktop.png");
 
     @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/catalog-promo/gift-promo-desktop@2x.png");
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog-promo/gift-promo-desktop@2x.png");
     }
   }
 }
