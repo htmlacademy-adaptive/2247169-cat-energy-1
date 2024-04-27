@@ -44,6 +44,6 @@
 
 .main-header__nav {
   @media (min-width: variables.$tablet-width) {
-    align-self: flex-end;
+    align-self: end;
   }
 }

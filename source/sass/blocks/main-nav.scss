@@ -21,8 +21,8 @@
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 2px;
-  left: 0;
+  top: 6px;
+  left: -1px;
   width: 24px;
   height: 2px;
   background-color: #000000;
@@ -66,7 +66,7 @@
 
 .main-nav__wrapper {
   @media (min-width: variables.$tablet-width) {
-    width: 436px;
+    width: 440px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -103,11 +103,11 @@
   padding-bottom: 24px;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 0 0 10px 0;
+    padding: 0 0 10px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 0 8px 0;
+    padding: 0 0 12px;
 
     &--current {
       border-bottom: 2px solid #ffffff;
