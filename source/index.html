@@ -147,22 +147,29 @@
           </div>
         </div>
         <div class="compare-slider">
-          <picture>
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-example/cat-slider-before-tablet.webp 1x, img/index-example/cat-slider-before-tablet@2x.webp 2x" width="560" height="512">
-            <source type="image/webp" srcset="img/index-example/cat-slider-before.webp 1x, img/index-example/cat-slider-before@2x.webp 2x" width="280" height="256">
+          <picture class="compare-slider__picture compare-slider__picture--before">
+            <source class="compare-slider__image--before" type="image/webp" media="(min-width: 768px)" srcset="img/index-example/cat-slider-before-tablet.webp 1x, img/index-example/cat-slider-before-tablet@2x.webp 2x" width="560" height="512">
+            <source class="compare-slider__image--before" type="image/webp" srcset="img/index-example/cat-slider-before.webp 1x, img/index-example/cat-slider-before@2x.webp 2x" width="280" height="256">
 
-            <source media="(min-width: 768px)"
+            <source class="compare-slider__image--before" media="(min-width: 768px)"
             srcset="img/index-example/cat-slider-before-tablet.png 1x, img/index-example/cat-slider-before-tablet@2x.png 2x" width="560" height="512">
-            <img src="./img/index-example/cat-slider-before.png" srcset="img/index-example/cat-slider-before@2x.png 2x" alt="Полный кот" width="280" height="256">
+            <img class="compare-slider__image compare-slider__image--before" src="./img/index-example/cat-slider-before.png" srcset="img/index-example/cat-slider-before@2x.png 2x" alt="Полный кот" width="280" height="256">
           </picture>
-          <picture>
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-example/cat-slider-after-tablet.webp 1x, img/index-example/cat-slider-after-tablet@2x.webp 2x" width="560" height="512">
-            <source type="image/webp" srcset="img/index-example/cat-slider-after.webp 1x, img/index-example/cat-slider-after@2x.webp 2x" width="280" height="256">
+          <picture class="compare-slider__picture compare-slider__picture--after">
+            <source class="compare-slider__image--after" type="image/webp" media="(min-width: 768px)" srcset="img/index-example/cat-slider-after-tablet.webp 1x, img/index-example/cat-slider-after-tablet@2x.webp 2x" width="560" height="512">
+            <source class="compare-slider__image--after" type="image/webp" srcset="img/index-example/cat-slider-after.webp 1x, img/index-example/cat-slider-after@2x.webp 2x" width="280" height="256">
 
-            <source media="(min-width: 768px)"
+            <source class="compare-slider__image--after" media="(min-width: 768px)"
             srcset="img/index-example/cat-slider-after-tablet.png 1x, img/index-example/cat-slider-after-tablet@2x.png 2x," width="560" height="512">
-            <img src="./img/index-example/cat-slider-after.png" srcset="img/index-example/cat-slider-after@2x.png 2x" alt="Худой кот" width="280" height="256">
+            <img class="compare-slider__image compare-slider__image--after" src="./img/index-example/cat-slider-after.png" srcset="img/index-example/cat-slider-after@2x.png 2x" alt="Худой кот" width="280" height="256">
           </picture>
+          <div class="compare-slider__dragme">
+            <div class="compare-slider__arrow">
+              <svg width="24" height="18">
+                <use href="img/sprite.svg#arrow-example"></use>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </section>

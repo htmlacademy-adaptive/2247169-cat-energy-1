@@ -8,7 +8,7 @@
   @media (min-width: variables.$tablet-width) {
     padding-top: 47px;
     padding-bottom: 100px;
-    background: linear-gradient(transparent 525px, #eaeaea 525px);
+    background: linear-gradient(transparent 625px, #eaeaea 625px);
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -25,6 +25,17 @@
 
   @media (min-width: variables.$desktop-width) {
     grid-template-columns: 436px 1fr;
+  }
+}
+
+.example__text {
+  margin-bottom: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 100px;
+  }
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 0;
   }
 }
 

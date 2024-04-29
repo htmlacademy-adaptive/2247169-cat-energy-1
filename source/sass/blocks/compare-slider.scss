@@ -1,0 +1,73 @@
+@use "../utils/variables.scss";
+
+.compare-slider {
+  position: relative;
+  overflow: hidden;
+  width: 280px;
+  height: 256px;
+  box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.compare-slider__picture {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+
+  &--after {
+    z-index: 100;
+  }
+
+  &--before {
+    width: 50%;
+    z-index: 200;
+  }
+}
+
+.compare-slider__image {
+  width: 280px;
+  max-width: 280px;
+  height: 100%;
+  background-color: #eaeaea;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 560px;
+    max-width: 560px;
+    height: 512px;
+    background: linear-gradient(#ffffff 119px, #eaeaea 119px);
+  }
+}
+
+.compare-slider__dragme {
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background-color: #666666;
+  cursor: pointer;
+  z-index: 300;
+  border-radius: 2px;
+}
+
+.compare-slider__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: -20px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 2px solid #666666;
+  cursor: pointer;
+  z-index: 300;
+}
