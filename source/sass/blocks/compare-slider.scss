@@ -14,10 +14,10 @@
 }
 
 .compare-slider__picture {
-	position: absolute;
-	top: 0;
-	left: 0;
-	overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 
   &--after {
     z-index: 100;
@@ -45,7 +45,6 @@
   @media (min-width: variables.$desktop-width) {
     background: linear-gradient(#ffffff 135px, #eaeaea 135px);
   }
-
 }
 
 .compare-slider__dragme {
