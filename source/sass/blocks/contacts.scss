@@ -25,7 +25,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 411px;
+    width: 407px;
   }
 }
 
@@ -59,10 +59,14 @@
     line-height: 20px;
     text-align: end;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    text-align: start;
+  }
 }
 
 .contacts__small-text {
-  @media (min-width: variables.$desktop-width) {
+  @media (min-width: variables.$tablet-width) {
     display: block;
     margin-top: 20px;
   }
