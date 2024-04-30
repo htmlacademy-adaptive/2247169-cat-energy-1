@@ -1,6 +1,7 @@
 @use "../utils/variables.scss";
 
 .button-common {
+  width: 100%;
   font-family: variables.$main-font;
   padding: 10px 0;
   font-size: 16px;
@@ -11,11 +12,50 @@
   text-transform: uppercase;
   background-color: #68b738;
   border: none;
-  display: block;
+  display: inline-block;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--promo {
+    @media (min-width: variables.$tablet-width) {
+      width: 244px;
+      padding: 14px 0;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &--form {
+    @media (min-width: variables.$tablet-width) {
+      padding: 14px 0;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
 
   &--secondary {
-    padding: 10px 0;
     color: #444444;
     background-color: #f2f2f2;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      background-color: #ebebeb;
+      color: #444444;
+    }
+  }
+
+  &--additions {
+  @media (min-width: variables.$desktop-width) {
+    width: 245px;
+  }
   }
 }

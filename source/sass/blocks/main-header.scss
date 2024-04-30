@@ -32,16 +32,6 @@
   justify-content: space-between;
 }
 
-.main-header__logo {
-  display: flex;
-  align-items: center;
-  gap: 56px;
-
-  @media (min-width: variables.$tablet-width) {
-    gap: 13px;
-  }
-}
-
 .main-header__nav {
   @media (min-width: variables.$tablet-width) {
     align-self: end;
