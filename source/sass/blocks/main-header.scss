@@ -30,6 +30,12 @@
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
+
+  &:has(.main-nav--nojs) {
+    @media (max-width: variables.$mobile-width-only) {
+      display: block;
+    }
+  }
 }
 
 .main-header__nav {

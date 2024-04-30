@@ -25,6 +25,8 @@
 
   @media (min-width: variables.$desktop-width) {
     grid-template-columns: 436px 1fr;
+    align-items: start;
+    justify-items: end;
   }
 }
 
@@ -52,7 +54,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 0 145px 0;
+    margin: 0 0 147px 0;
   }
 }
 

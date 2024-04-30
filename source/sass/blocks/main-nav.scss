@@ -72,6 +72,14 @@
   }
 
   &--nojs {
+    .main-nav__item {
+      border-top: none;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
     .main-nav__toggle {
       display: none;
     }

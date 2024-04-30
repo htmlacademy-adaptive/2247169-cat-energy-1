@@ -41,6 +41,11 @@
     height: 512px;
     background: linear-gradient(#ffffff 119px, #eaeaea 119px);
   }
+
+  @media (min-width: variables.$desktop-width) {
+    background: linear-gradient(#ffffff 135px, #eaeaea 135px);
+  }
+
 }
 
 .compare-slider__dragme {
