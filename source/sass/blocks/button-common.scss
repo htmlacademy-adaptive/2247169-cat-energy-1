@@ -22,16 +22,7 @@
     color: rgba(255, 255, 255, 0.3);
   }
 
-  &--promo {
-    @media (min-width: variables.$tablet-width) {
-      width: 244px;
-      padding: 14px 0;
-      font-size: 20px;
-      line-height: 26px;
-    }
-  }
-
-  &--form {
+  &--size-medium {
     @media (min-width: variables.$tablet-width) {
       padding: 14px 0;
       font-size: 20px;
@@ -50,12 +41,6 @@
     &:active {
       background-color: #ebebeb;
       color: #444444;
-    }
-  }
-
-  &--additions {
-    @media (min-width: variables.$desktop-width) {
-      width: 245px;
     }
   }
 }

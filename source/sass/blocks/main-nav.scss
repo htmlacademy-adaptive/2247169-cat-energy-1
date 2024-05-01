@@ -129,16 +129,18 @@
   text-align: center;
   padding-top: 22px;
   padding-bottom: 24px;
+  border-top: 1px solid #e6e6e6;
 
-  @media (max-width: variables.$tablet-width) {
-    border-top: 1px solid #e6e6e6;
+  &:last-child {
+    border-bottom: 1px solid #e6e6e6;
 
-    &:last-child {
-      border-bottom: 1px solid #e6e6e6;
+    @media (min-width: variables.$tablet-width) {
+      border: none;
     }
   }
 
   @media (min-width: variables.$tablet-width) {
+    border: none;
     padding: 0 0 10px;
   }
 

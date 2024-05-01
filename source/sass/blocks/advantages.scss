@@ -3,6 +3,19 @@
 
 .advantages {
   padding-bottom: 50px;
+  position: relative;
+
+  @media (min-width: variables.$tablet-width) and (max-width: variables.$tablet-width-only) {
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: #e6e6e6;
+      height: 1px;
+      left: calc(50% - 50vw);
+      bottom: 0;
+      width: 100vw;
+    }
+  }
 
   @media (min-width: variables.$tablet-width) {
     padding-bottom: 40px;

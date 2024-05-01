@@ -9,6 +9,10 @@
     gap: 13px;
   }
 
+  @media (min-width: variables.$desktop-width) {
+    gap: 14px;
+  }
+
   &:has(a:hover) {
     opacity: 0.8;
   }

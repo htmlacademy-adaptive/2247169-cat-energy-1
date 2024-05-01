@@ -93,3 +93,9 @@
     line-height: 20px;
   }
 }
+
+.additions-card__button {
+  @media (min-width: variables.$desktop-width) {
+    width: 245px;
+  }
+}

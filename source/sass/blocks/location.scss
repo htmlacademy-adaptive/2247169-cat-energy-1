@@ -1,3 +1,5 @@
+@use "../utils/variables.scss";
+
 .location {
   padding: 0;
 }
@@ -6,4 +8,8 @@
   width: 100%;
   border: none;
   display: block;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 400px;
+  }
 }
