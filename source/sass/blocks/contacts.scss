@@ -11,6 +11,10 @@
   @media (min-width: variables.$tablet-width) {
     padding: 60px 70px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 60px 80px;
+  }
 }
 
 .contacts__container {
