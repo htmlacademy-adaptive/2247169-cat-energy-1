@@ -127,6 +127,14 @@
   font-size: 16px;
   line-height: 16px;
   gap: 15px;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 100px center;
+
+  &:hover {
+    background-image: url("../img/arrow-hover.svg");
+
+  }
 
   &:active {
     opacity: 0.3;
@@ -140,5 +148,6 @@
     font-size: 20px;
     line-height: 30px;
     gap: 25px;
+    background-position: 130px center;
   }
 }
