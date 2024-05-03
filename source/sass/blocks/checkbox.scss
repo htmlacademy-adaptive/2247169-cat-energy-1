@@ -1,15 +1,29 @@
 @use "../utils/variables.scss";
 
 .checkbox {
-  padding-left: 45px;
   display: flex;
-  justify-content: space-between;
+  gap: 15px;
   align-items: center;
   position: relative;
   cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
-    padding-left: 60px;
+    gap: 20px;
+  }
+}
+
+.checkbox__mark {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -30,27 +44,11 @@
   }
 }
 
-.checkbox__mark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #cdcdcd;
-  box-sizing: border-box;
-
-  @media (min-width: variables.$tablet-width) {
-    width: 40px;
-    height: 40px;
-  }
-}
-
 .checkbox__text {
   font-size: 16px;
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
-  padding: 6px 0;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;

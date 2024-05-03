@@ -22,7 +22,7 @@
 
 .input__control {
   flex-grow: 1;
-  padding: 14px 15px 13px;
+  padding: 13px 15px 12px;
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
@@ -30,6 +30,7 @@
   text-transform: uppercase;
   border: 1px solid #e7e7e7;
   resize: vertical;
+  outline: none;
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
@@ -37,35 +38,56 @@
     margin: 0;
   }
 
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: #444444;
+  }
+
   @media (min-width: variables.$tablet-width) {
-    padding: 11px 20px;
+    padding: 10px 20px;
     font-size: 20px;
     line-height: 30px;
   }
 
   &--email {
-    padding: 14px 40px 13px 15px;
-    background-image: url("../img/email-icon.svg");
-    background-repeat: no-repeat;
-    background-position: center right 15px;
+    padding: 13px 40px 12px 15px;
+
+    &::after {
+      content: "";
+      background-image: url("../img/email-icon.svg");
+      background-repeat: no-repeat;
+      background-position: center right 15px;
+    }
 
     @media (min-width: variables.$tablet-width) {
-      padding: 14px 50px 13px 15px;
+      padding: 10px 50px 10px 20px;
     }
 
     @media (min-width: variables.$desktop-width) {
-      background-position: center right 17px;
+      mask-position: center right 17px;
+    }
+
+    &:hover {
+      background-image: none;
+      mask-image: url("../img/email-icon.svg");
+      background-color: #68b738;
+      mask-repeat: no-repeat;
+      mask-position: center right 17px;
+      color: #444444;
     }
   }
 
   &--phone {
-    padding: 14px 40px 13px 15px;
+    padding: 13px 40px 12px 15px;
     background-image: url("../img/phone-icon.svg");
     background-repeat: no-repeat;
     background-position: center right 15px;
 
     @media (min-width: variables.$tablet-width) {
-      padding: 14px 50px 13px 15px;
+      padding: 10px 50px 10px 20px;
     }
 
     @media (min-width: variables.$desktop-width) {
@@ -74,10 +96,17 @@
   }
 
   &--commentaries {
+    padding: 13px 14px 13px 15px;
     min-height: 150px;
+    box-sizing: border-box;
 
     @media (min-width: variables.$tablet-width) {
+      padding: 10px 14px 10px 20px;
       min-height: 175px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 8px 14px 10px 20px;
     }
   }
 }
