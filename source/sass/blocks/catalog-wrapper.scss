@@ -26,14 +26,20 @@
 }
 
 .catalog-wrapper__title {
-  margin: 0 0 41px 0;
+  margin: 0 auto 41px;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+  width: variables.$content-width-mobile;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 0 84px 0;
+    margin: 0 auto 84px;
     font-size: 60px;
     line-height: 60px;
+    width: 708px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: variables.$content-width-desktop;
   }
 }
