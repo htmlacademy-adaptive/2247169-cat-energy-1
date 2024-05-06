@@ -1,13 +1,14 @@
 @use "../utils/variables.scss";
 
 .radiobutton {
-  padding-left: 45px;
   display: flex;
+  gap: 15px;
+  align-items: center;
   position: relative;
   cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
-    padding-left: 60px;
+    gap: 20px;
   }
 }
 
@@ -17,7 +18,7 @@
 }
 
 .radiobutton__mark {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 30px;
@@ -51,14 +52,12 @@
 }
 
 .radiobutton__text {
-  padding: 6px 0;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 5px 0;
     font-size: 20px;
     line-height: 30px;
   }
