@@ -51,58 +51,64 @@
   </header>
 
   <main class="form-container">
-    <section class="text-wrapper container container--small">
-      <h1 class="text-wrapper__title">Подбор программы</h1>
-      <p class="text-wrapper__description">Заполните анкету, и мы подберем
-        программу питания для вашего кота</p>
+    <section class="text-wrapper">
+      <div class="text-wrapper__container container container--small">
+        <h1 class="text-wrapper__title">Подбор программы</h1>
+        <p class="text-wrapper__description">Заполните анкету, и мы подберем
+          программу питания для вашего кота</p>
+      </div>
 
       <form class="program-form" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="program-form__input">
-          <p class="input">
-            <label class="input__label" for="name">Имя:*</label>
-            <input class="input__control" id="name" type="text" name="name" placeholder="Барсик">
-          </p>
-          <p class="input">
-            <label class="input__label" for="weight">Вес&nbsp;(кг):*</label>
-            <input class="input__control" id="weight" type="number" name="weight" placeholder="7">
-          </p>
-          <p class="input">
-            <label class="input__label" for="age">Возраст&nbsp;(лет):</label>
-            <input class="input__control" id="age" type="number" name="age" placeholder="7">
-          </p>
+        <div class="program-form__selection container container--small">
+          <div class="program-form__input">
+            <p class="input">
+              <label class="input__label" for="name">Имя:*</label>
+              <input class="input__control" id="name" type="text" name="name" placeholder="Барсик">
+            </p>
+            <p class="input">
+              <label class="input__label" for="weight">Вес&nbsp;(кг):*</label>
+              <input class="input__control" id="weight" type="number" name="weight" placeholder="7">
+            </p>
+            <p class="input">
+              <label class="input__label" for="age">Возраст&nbsp;(лет):</label>
+              <input class="input__control" id="age" type="number" name="age" placeholder="7">
+            </p>
+          </div>
+
+          <section class="program-selection">
+            <h2 class="visually-hidden">Выбор программы</h2>
+            <ul class="program-selection__list">
+              <li class="program-selection__item">
+                <label class="radiobutton">
+                  <input class="radiobutton__input visually-hidden" type="radio" name="program" value="weight-loss" checked>
+                  <span class="radiobutton__mark"></span>
+                  <span class="radiobutton__text">Похудение</span>
+                </label>
+              </li>
+              <li class="program-selection__item">
+                <label class="radiobutton">
+                  <input class="radiobutton__input visually-hidden" type="radio" name="program" value="weight-gain">
+                  <span class="radiobutton__mark"></span>
+                  <span class="radiobutton__text">Набор массы</span>
+                </label>
+              </li>
+              <li class="program-selection__item">
+                <label class="radiobutton">
+                  <input class="radiobutton__input visually-hidden" type="radio" name="program" value="need-advice">
+                  <span class="radiobutton__mark"></span>
+                  <span class="radiobutton__text">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </section>
         </div>
 
-        <section class="program-selection program-form__selection">
-          <h2 class="visually-hidden">Выбор программы</h2>
-          <ul class="program-selection__list">
-            <li class="program-selection__item">
-              <label class="radiobutton">
-                <input class="radiobutton__input visually-hidden" type="radio" name="program" value="weight-loss" checked>
-                <span class="radiobutton__mark"></span>
-                <span class="radiobutton__text">Похудение</span>
-              </label>
-            </li>
-            <li class="program-selection__item">
-              <label class="radiobutton">
-                <input class="radiobutton__input visually-hidden" type="radio" name="program" value="weight-gain">
-                <span class="radiobutton__mark"></span>
-                <span class="radiobutton__text">Набор массы</span>
-              </label>
-            </li>
-            <li class="program-selection__item">
-              <label class="radiobutton">
-                <input class="radiobutton__input visually-hidden" type="radio" name="program" value="need-advice">
-                <span class="radiobutton__mark"></span>
-                <span class="radiobutton__text">Не знаю (Нужен ваш совет)</span>
-              </label>
-            </li>
-          </ul>
-        </section>
-
         <section class="owner-details program-form__owner">
-          <h2 class="owner-details__title">Контактные данные
-            (владельца кота)</h2>
-          <div class="owner-details__wrapper">
+          <h2 class="owner-details__title title-decorate">
+            <span class="title-decorate__text">Контактные данные
+            (владельца кота)</span>
+          </h2>
+          <div class="owner-details__wrapper container container--small">
             <p class="input">
               <label class="input__label" for="email">E-mail:*</label>
               <input class="input__control input__control--email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
@@ -115,16 +121,22 @@
         </section>
 
         <section class="comments program-form__comments">
-          <h2 class="comments__title">Комментарий</h2>
-          <p class="input">
-            <label class="input__label visually-hidden" for="commentaries">Расскажите обо всех повадках кота</label>
-            <textarea class="input__control input__control--commentaries" id="commentaries" type="text" name="commentaries" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </p>
+          <h2 class="comments__title title-decorate">
+            <span class="title-decorate__text">Комментарий</span>
+          </h2>
+          <div class="container container--small">
+            <p class="input">
+              <label class="input__label visually-hidden" for="commentaries">Расскажите обо всех повадках кота</label>
+              <textarea class="input__control input__control--commentaries" id="commentaries" type="text" name="commentaries" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </p>
+          </div>
         </section>
 
         <section class="additional program-form___additional">
-          <h2 class="additional__title">Дополнительно</h2>
-          <ul class="additional__list">
+          <h2 class="additional__title title-decorate">
+            <span class="title-decorate__text">Дополнительно</span>
+          </h2>
+          <ul class="additional__list container container--small">
             <li class="additional__item">
               <label class="checkbox">
                 <input class="checkbox__input visually-hidden" type="checkbox" name="additional-option" value="sweetener" checked>
@@ -156,11 +168,12 @@
           </ul>
         </section>
 
-        <button class="program-form__button button-common button-common--size-medium" type="submit">отправить заявку</button>
-
-        <small class="program-form__legend">
-          * — Обязательные поля
-        </small>
+        <div class="program-form__button container container--small">
+          <button class="button-common button-common--size-medium" type="submit">отправить заявку</button>
+          <small class="program-form__legend">
+            * — Обязательные поля
+          </small>
+        </div>
 
       </form>
     </section>

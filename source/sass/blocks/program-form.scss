@@ -5,27 +5,10 @@
 
   @media (min-width: variables.$tablet-width) {
     padding-bottom: 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
-    grid-template-areas:
-      "input input"
-      "program program"
-      "owner owner"
-      "comments comments"
-      "additional additional"
-      "button legend";
   }
 
   @media (min-width: variables.$desktop-width) {
     padding-bottom: 79px;
-    column-gap: 80px;
-    grid-template-areas:
-      "input program"
-      "owner owner"
-      "comments comments"
-      "additional additional"
-      "button legend";
   }
 }
 
@@ -35,14 +18,11 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
-  margin-top: 20px;
 
   @media (min-width: variables.$tablet-width) {
-    margin-top: 0;
     font-size: 16px;
     justify-self: flex-start;
     align-self: center;
-    grid-area: legend;
   }
 }
 
@@ -50,34 +30,29 @@
   padding-bottom: 24px;
   display: grid;
   gap: 14px;
-  grid-area: input;
 
   @media (min-width: variables.$tablet-width) {
-    margin-bottom: 72px;
     padding-bottom: 0;
     gap: 20px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    margin-bottom: 70px;
   }
 }
 
 .program-form__selection {
-  grid-area: program;
+  display: grid;
 
   @media (min-width: variables.$tablet-width) {
+    gap: 72px;
     margin-bottom: 65px;
   }
 
   @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
     margin-bottom: 70px;
   }
 }
 
 .program-form__owner {
-  grid-area: owner;
-
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 65px;
   }
@@ -88,8 +63,6 @@
 }
 
 .program-form__comments {
-  grid-area: comments;
-
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 65px;
   }
@@ -100,8 +73,6 @@
 }
 
 .program-form___additional {
-  grid-area: additional;
-
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 52px;
   }
@@ -112,5 +83,15 @@
 }
 
 .program-form__button {
-  grid-area: button;
+  display: grid;
+  gap: 21px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    gap: 80px;
+  }
 }
