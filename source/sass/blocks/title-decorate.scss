@@ -49,7 +49,15 @@
 
 .title-decorate__text {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: fit-content(182px) 1fr;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: auto 1fr;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: auto 1fr;
+  }
 
   &::after {
     content: "";
