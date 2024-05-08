@@ -32,6 +32,7 @@
   resize: vertical;
   outline: none;
   box-sizing: border-box;
+  width: 100%;
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
@@ -110,4 +111,8 @@
       padding: 8px 14px 10px 20px;
     }
   }
+}
+
+.input__label {
+  white-space: nowrap;
 }

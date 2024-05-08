@@ -26,6 +26,7 @@
   border: 1px solid #cdcdcd;
   border-radius: 50%;
   box-sizing: border-box;
+  flex-shrink: 0;
 
   @media (min-width: variables.$tablet-width) {
     width: 40px;
