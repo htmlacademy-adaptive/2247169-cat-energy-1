@@ -12,6 +12,20 @@
   }
 }
 
+.checkbox__input {
+  &:hover:not(:disabled) ~ .checkbox__mark {
+    border-color: #bababa;
+  }
+
+  &:disabled ~ .checkbox__mark {
+    opacity: 0.3;
+  }
+
+  &:disabled ~ .checkbox__text {
+    opacity: 0.3;
+  }
+}
+
 .checkbox__mark {
   position: relative;
   top: 0;

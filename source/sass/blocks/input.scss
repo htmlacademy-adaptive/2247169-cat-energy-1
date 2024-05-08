@@ -9,6 +9,51 @@
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
+  position: relative;
+
+  &:has(.input__control--email)::after {
+    position: absolute;
+    right: 14px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/email-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:has(.input__control--email:focus-visible)::after {
+    background-image: none;
+    mask-image: url("../img/email-icon.svg");
+    background-color: #68b738;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &:has(.input__control--phone)::after {
+    position: absolute;
+    right: 14px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/phone-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:has(.input__control--phone:focus-visible)::after {
+    background-image: none;
+    mask-image: url("../img/phone-icon.svg");
+    background-color: #68b738;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
 
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
@@ -44,8 +89,9 @@
     border-color: #cdcdcd;
   }
 
-  &:focus {
-    border-color: #444444;
+  &:focus-visible {
+    border: 1px solid #444444;
+    outline: 1px solid #444444;
   }
 
   @media (min-width: variables.$tablet-width) {
@@ -57,13 +103,6 @@
   &--email {
     padding: 13px 40px 12px 15px;
 
-    &::after {
-      content: "";
-      background-image: url("../img/email-icon.svg");
-      background-repeat: no-repeat;
-      background-position: center right 15px;
-    }
-
     @media (min-width: variables.$tablet-width) {
       padding: 10px 50px 10px 20px;
     }
@@ -71,22 +110,10 @@
     @media (min-width: variables.$desktop-width) {
       mask-position: center right 17px;
     }
-
-    &:hover {
-      background-image: none;
-      mask-image: url("../img/email-icon.svg");
-      background-color: #68b738;
-      mask-repeat: no-repeat;
-      mask-position: center right 17px;
-      color: #444444;
-    }
   }
 
   &--phone {
     padding: 13px 40px 12px 15px;
-    background-image: url("../img/phone-icon.svg");
-    background-repeat: no-repeat;
-    background-position: center right 15px;
 
     @media (min-width: variables.$tablet-width) {
       padding: 10px 50px 10px 20px;
