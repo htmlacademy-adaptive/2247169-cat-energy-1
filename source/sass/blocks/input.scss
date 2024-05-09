@@ -106,10 +106,6 @@
     @media (min-width: variables.$tablet-width) {
       padding: 10px 50px 10px 20px;
     }
-
-    @media (min-width: variables.$desktop-width) {
-      mask-position: center right 17px;
-    }
   }
 
   &--phone {
@@ -117,10 +113,6 @@
 
     @media (min-width: variables.$tablet-width) {
       padding: 10px 50px 10px 20px;
-    }
-
-    @media (min-width: variables.$desktop-width) {
-      background-position: center right 17px;
     }
   }
 
