@@ -2,12 +2,10 @@
 
 .location {
   padding: 0;
-}
-
-.location__image {
   width: 100%;
   border: none;
   display: block;
+  height: 362px;
 
   @media (min-width: variables.$tablet-width) {
     height: 400px;

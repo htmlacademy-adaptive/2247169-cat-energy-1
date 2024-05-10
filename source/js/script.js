@@ -103,40 +103,110 @@ const body = document.body;
   const inputEmail = document.querySelector('.input__control--email');
   const inputPhone = document.querySelector('.input__control--phone');
 
-  form.addEventListener('submit', function (e) {
-    for (let i = 0; i < inputs.length; i++) {
-      if ((inputs[i].id != 'age') && (inputs[i].id != 'commentaries')) {
-        if ((!inputs[i].value)) {
-          inputs[i].classList.add('input__control--error');
-          e.preventDefault();
-        } else {
-        inputs[i].classList.remove('input__control--error');
+  if(form) {
+    form.addEventListener('submit', function (e) {
+      for (let i = 0; i < inputs.length; i++) {
+        if ((inputs[i].id != 'age') && (inputs[i].id != 'commentaries')) {
+          if ((!inputs[i].value)) {
+            inputs[i].classList.add('input__control--error');
+            inputs[i].focus();
+            e.preventDefault();
+          } else {
+          inputs[i].classList.remove('input__control--error');
+          }
         }
+      }
+
+      checkValidEmail();
+      checkValidPhone();
+
+    });
+
+    function checkValidEmail() {
+      const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+      if (!inputEmail.value.match(validRegex)) {
+        inputEmail.parentElement.classList.add('input--error');
+      } else {
+        inputEmail.parentElement.classList.remove('input--error');
       }
     }
 
-    checkValidEmail();
-    checkValidPhone();
+    function checkValidPhone() {
+      const regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 
+      if (!inputPhone.value) {
+        inputPhone.parentElement.classList.add('input--error');
+      } else {
+        inputPhone.parentElement.classList.remove('input--error');
+      }
+    }
+
+    document.addEventListener('click', function (e) {
+      for (let i = 0; i < inputs.length; i++) {
+        if ((inputs[i].value)) {
+          inputs[i].classList.remove('input--error');
+          inputs[i].classList.remove('input__control--error');
+        }
+      }
+    });
+  }
+
+// Map marker
+ymaps.ready(function () {
+  if (document.body.clientWidth < 768) {
+    var myMap = new ymaps.Map('map', {
+      center: [59.938631, 30.323037],
+      zoom: 13
+    });
+
+    myMap.behaviors.disable('scrollZoom');
+
+    var myPlacemark = new ymaps.Placemark([59.938631, 30.323037], {
+      hintContent: 'Магазин Cat Energy',
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: '/img/map-pin-mobile.png',
+      iconImageSize: [57, 53],
+      iconImageOffset: [-30, -45]
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+  } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1440) {
+    myMap = new ymaps.Map('map', {
+      center: [59.938631, 30.323037],
+      zoom: 16
+    })
+
+    myMap.behaviors.disable('scrollZoom');
+
+    var myPlacemark = new ymaps.Placemark([59.938631, 30.323037], {
+      hintContent: 'Магазин Cat Energy',
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: '/img/map-pin-tablet.png',
+      iconImageSize: [113, 106],
+      iconImageOffset: [-55, -105]
+    });
+
+      myMap.geoObjects.add(myPlacemark);
+    } else if (document.body.clientWidth >= 1440) {
+      myMap = new ymaps.Map('map', {
+        center: [59.938491, 30.321366],
+        zoom: 17
+      })
+
+      myMap.behaviors.disable('scrollZoom');
+
+      var myPlacemark = new ymaps.Placemark([59.938631, 30.323037], {
+        hintContent: 'Магазин Cat Energy',
+      }, {
+        iconLayout: 'default#image',
+        iconImageHref: '/img/map-pin-tablet.png',
+        iconImageSize: [113, 106],
+        iconImageOffset: [-55, -105]
+      });
+
+        myMap.geoObjects.add(myPlacemark);
+      }
   });
-
-  function checkValidEmail() {
-    const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-    if (!inputEmail.value.match(validRegex)) {
-      inputEmail.parentElement.classList.add('input--error');
-    } else {
-      inputEmail.parentElement.classList.remove('input--error');
-    }
-  }
-
-  function checkValidPhone() {
-    const regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-    console.log(inputPhone);
-
-    if (!inputPhone.value) {
-      inputPhone.parentElement.classList.add('input--error');
-    } else {
-      inputPhone.parentElement.classList.remove('input--error');
-    }
-  }
