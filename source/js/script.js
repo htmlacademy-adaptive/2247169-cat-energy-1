@@ -95,3 +95,48 @@ const body = document.body;
       pauseEvents(e);
     }, { passive: false });
   }
+
+  // Checking the correct inputs
+  const form = document.querySelector('.program-form');
+  const inputs = document.querySelectorAll('.input__control');
+  const inputControl = document.querySelector('.input__control');
+  const inputEmail = document.querySelector('.input__control--email');
+  const inputPhone = document.querySelector('.input__control--phone');
+
+  form.addEventListener('submit', function (e) {
+    for (let i = 0; i < inputs.length; i++) {
+      if ((inputs[i].id != 'age') && (inputs[i].id != 'commentaries')) {
+        if ((!inputs[i].value)) {
+          inputs[i].classList.add('input__control--error');
+          e.preventDefault();
+        } else {
+        inputs[i].classList.remove('input__control--error');
+        }
+      }
+    }
+
+    checkValidEmail();
+    checkValidPhone();
+
+  });
+
+  function checkValidEmail() {
+    const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if (!inputEmail.value.match(validRegex)) {
+      inputEmail.parentElement.classList.add('input--error');
+    } else {
+      inputEmail.parentElement.classList.remove('input--error');
+    }
+  }
+
+  function checkValidPhone() {
+    const regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    console.log(inputPhone);
+
+    if (!inputPhone.value) {
+      inputPhone.parentElement.classList.add('input--error');
+    } else {
+      inputPhone.parentElement.classList.remove('input--error');
+    }
+  }
