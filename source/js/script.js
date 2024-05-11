@@ -154,59 +154,47 @@ const body = document.body;
 
 // Map marker
 ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+    center: [59.938631, 30.323037],
+    zoom: 17,
+    controls: []
+  });
+
+  myMap.controls.add('zoomControl');
+  myMap.controls.add('rulerControl', {
+  scaleLine: false
+  });
+  myMap.behaviors.disable('scrollZoom');
+
+  var options = {};
+
   if (document.body.clientWidth < 768) {
-    var myMap = new ymaps.Map('map', {
-      center: [59.938631, 30.323037],
-      zoom: 13
-    });
-
-    myMap.behaviors.disable('scrollZoom');
-
-    var myPlacemark = new ymaps.Placemark([59.938631, 30.323037], {
-      hintContent: 'Магазин Cat Energy',
-    }, {
+    options = {
+    iconLayout: 'default#image',
+    iconImageHref: '/img/pin.svg',
+    iconImageSize: [48, 60],
+    iconImageOffset: [-30, -45]
+  };
+  } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1440) {
+    options = {
       iconLayout: 'default#image',
-      iconImageHref: '/img/map-pin-mobile.webp',
-      iconImageSize: [57, 53],
-      iconImageOffset: [-30, -45]
-    });
+      iconImageHref: '/img/pin.svg',
+      iconImageSize: [80, 106],
+      iconImageOffset: [-55, -105]
+    };
+  } else if (document.body.clientWidth >= 1440) {
+    myMap.setCenter([59.938797, 30.319902]);
+    options = {
+      iconLayout: 'default#image',
+      iconImageHref: '/img/pin.svg',
+      iconImageSize: [80, 106],
+      iconImageOffset: [-55, -105]
+    };
+  }
+
+  var myPlacemark = new ymaps.Placemark([59.938631, 30.323037], {
+    hintContent: 'Магазин Cat Energy',
+  }, options);
 
     myMap.geoObjects.add(myPlacemark);
-  } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1440) {
-    myMap = new ymaps.Map('map', {
-      center: [59.938631, 30.323037],
-      zoom: 16
-    })
-
-    myMap.behaviors.disable('scrollZoom');
-
-    var myPlacemark = new ymaps.Placemark([59.938631, 30.323037], {
-      hintContent: 'Магазин Cat Energy',
-    }, {
-      iconLayout: 'default#image',
-      iconImageHref: '/img/map-pin-tablet.webp',
-      iconImageSize: [113, 106],
-      iconImageOffset: [-55, -105]
-    });
-
-      myMap.geoObjects.add(myPlacemark);
-    } else if (document.body.clientWidth >= 1440) {
-      myMap = new ymaps.Map('map', {
-        center: [59.938491, 30.321366],
-        zoom: 17
-      })
-
-      myMap.behaviors.disable('scrollZoom');
-
-      var myPlacemark = new ymaps.Placemark([59.938631, 30.323037], {
-        hintContent: 'Магазин Cat Energy',
-      }, {
-        iconLayout: 'default#image',
-        iconImageHref: '/img/map-pin-tablet.webp',
-        iconImageSize: [113, 106],
-        iconImageOffset: [-55, -105]
-      });
-
-        myMap.geoObjects.add(myPlacemark);
-      }
   });
