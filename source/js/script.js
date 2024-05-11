@@ -166,7 +166,7 @@ ymaps.ready(function () {
       hintContent: 'Магазин Cat Energy',
     }, {
       iconLayout: 'default#image',
-      iconImageHref: '/img/map-pin-mobile.png',
+      iconImageHref: '/img/map-pin-mobile.webp',
       iconImageSize: [57, 53],
       iconImageOffset: [-30, -45]
     });
@@ -184,7 +184,7 @@ ymaps.ready(function () {
       hintContent: 'Магазин Cat Energy',
     }, {
       iconLayout: 'default#image',
-      iconImageHref: '/img/map-pin-tablet.png',
+      iconImageHref: '/img/map-pin-tablet.webp',
       iconImageSize: [113, 106],
       iconImageOffset: [-55, -105]
     });
@@ -202,7 +202,7 @@ ymaps.ready(function () {
         hintContent: 'Магазин Cat Energy',
       }, {
         iconLayout: 'default#image',
-        iconImageHref: '/img/map-pin-tablet.png',
+        iconImageHref: '/img/map-pin-tablet.webp',
         iconImageSize: [113, 106],
         iconImageOffset: [-55, -105]
       });
