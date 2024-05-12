@@ -169,14 +169,14 @@ ymaps.ready(function () {
     iconImageSize: [48, 60],
     iconImageOffset: [-30, -45]
   };
-  } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1440) {
+  } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1366) {
     options = {
       iconLayout: 'default#image',
       iconImageHref: './img/pin.svg',
       iconImageSize: [80, 106],
       iconImageOffset: [-55, -105]
     };
-  } else if (document.body.clientWidth >= 1440) {
+  } else if (document.body.clientWidth >= 1366) {
     myMap.setCenter([59.938797, 30.319902]);
     options = {
       iconLayout: 'default#image',
