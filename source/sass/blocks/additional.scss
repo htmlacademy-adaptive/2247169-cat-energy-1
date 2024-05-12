@@ -3,7 +3,11 @@
 
 .additional {
   margin: 0;
-  padding: 0 0 34px;
+  padding: 0 0 35px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
+  }
 }
 
 .additional__title {
@@ -21,11 +25,12 @@
 .additional__list {
   @include mixins.list-reset;
   display: grid;
-  gap: 13px;
+  gap: 12px;
 
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 32px;
   }
 
   @media (min-width: variables.$desktop-width) {

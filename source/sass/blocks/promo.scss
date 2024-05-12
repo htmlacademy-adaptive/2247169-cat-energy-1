@@ -26,15 +26,15 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    padding-top: 65px;
+    padding-top: 0;
     padding-bottom: 0;
     color: #000000;
     background-image: none;
   }
 
   @media (min-width: variables.$desktop-width) {
-    height: 550px;
-    padding-top: 225px;
+    min-height: 550px;
+    padding-top: 143px;
     padding-bottom: 82px;
     background-position: top right;
     background-size: 50%;
@@ -76,6 +76,7 @@
     justify-items: start;
     align-items: center;
     grid-template-columns: 420px 1fr;
+    grid-template-rows: min-content min-content 1fr;
     grid-template-areas:
       "title image"
       "slogan image"
@@ -92,11 +93,15 @@
   grid-area: title;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 0 40px;
-    max-width: 420px;
+    margin: 65px 0 40px 90px;
+    width: 420px;
     font-size: 60px;
     line-height: 60px;
     text-align: start;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 82px 0 40px 80px;
   }
 }
 
@@ -107,27 +112,40 @@
   grid-area: slogan;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 0 50px;
+    margin: 0 0 50px 90px;
     font-size: 20px;
     line-height: 20px;
+    text-align: start;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 0 52px;
+    margin: 0 0 52px 80px;
   }
 }
 
 .promo__image {
   grid-area: image;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: -85px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 0 27px;
+  }
 }
 
 .promo__button {
   grid-area: button;
+  margin: 3px 0 0;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 14px 0;
     width: 244px;
-    font-size: 20px;
-    line-height: 26px;
+    margin: 0 0 0 90px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 0 80px;
+    align-self: baseline;
   }
 }

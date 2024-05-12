@@ -5,11 +5,25 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
+
+  @media (max-width: variables.$mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #ebebeb;
+      height: 1px;
+      left: calc(50% - 50vw);
+      top: 0;
+      width: 100vw;
+    }
+  }
 
   @media (min-width: variables.$tablet-width) {
     margin-top: 82px;
     padding: 0 37px 40px;
     border: 2px solid #f2f2f2;
+    align-items: center;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -18,8 +32,34 @@
   }
 }
 
+.card-more__info {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/plus.svg");
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 45%;
+
+    @media (min-width: variables.$tablet-width) {
+      background-image: url("../img/plus-big.svg");
+      width: 60px;
+      height: 60px;
+      top: 47px;
+      left: 33%;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      top: -100px;
+    }
+  }
+}
+
 .card-more__title {
-  margin: 0 0 8px;
+  margin: 53px 0 8px;
   font-size: 16px;
   line-height: 20px;
   color: #111111;
@@ -28,7 +68,7 @@
 
   @media (min-width: variables.$tablet-width) {
     width: 134px;
-    margin: 0 auto 23px;
+    margin: 156px auto 23px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -47,12 +87,14 @@
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
+    width: 170px;
     margin: 0 0 82px;
     font-size: 16px;
     line-height: 18px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 0 90px;
+    width: 100%;
+    margin: 0 0 88px;
   }
 }

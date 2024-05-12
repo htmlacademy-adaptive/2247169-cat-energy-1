@@ -1,10 +1,10 @@
 @use "../utils/variables.scss";
 
 .gift-promo {
-  padding: 35px 0;
+  padding: 34px 0 35px;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 70px 0 75px;
+    padding: 72px 0 75px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -75,7 +75,7 @@
 
 .gift-promo__description {
   margin: 0;
-  width: 160px;
+  width: 161px;
   font-family: variables.$additional-font, sans-serif;
   font-size: 16px;
   line-height: 20px;

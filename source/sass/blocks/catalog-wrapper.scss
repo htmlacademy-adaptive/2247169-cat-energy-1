@@ -2,25 +2,44 @@
 
 .catalog-wrapper {
   padding: 27px 0 0;
+  position: relative;
+
+  @media (max-width: variables.$mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #d9d9d9;
+      height: 1px;
+      left: calc(50% - 50vw);
+      top: 0;
+      width: 100vw;
+    }
+  }
 
   @media (min-width: variables.$tablet-width) {
     padding: 65px 0 0;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 75px 0 0;
+    padding: 74px 0 0;
   }
 }
 
 .catalog-wrapper__title {
-  margin: 0 0 41px 0;
+  margin: 0 auto 41px;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+  width: variables.$content-width-mobile;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 0 84px 0;
+    margin: 0 auto 84px;
     font-size: 60px;
     line-height: 60px;
+    width: 708px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: variables.$content-width-desktop;
   }
 }

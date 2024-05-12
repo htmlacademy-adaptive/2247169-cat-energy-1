@@ -11,14 +11,13 @@
 .main-footer__contacts {
   @media (min-width: variables.$desktop-width) {
     width: 565px;
-    padding: 60px 80px;
     box-sizing: border-box;
     position: absolute;
     top: 95px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    transform: translateX(calc(50% - 605px));
+    transform: translateX(calc(50% - 610px));
     background-color: #ffffff;
     z-index: 1;
   }
@@ -37,8 +36,18 @@
     justify-content: space-between;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$desktop-width) {
     padding: 66px 0;
+  }
+}
+
+.main-footer__logo {
+  @media (min-width: variables.$tablet-width) {
+    margin-right: 38px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 33px;
   }
 }
 

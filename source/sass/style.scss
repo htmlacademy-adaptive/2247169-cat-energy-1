@@ -12,21 +12,19 @@
 @use "./blocks/advantages.scss";
 @use "./blocks/button-common.scss";
 @use "./blocks/card-more.scss";
-@use "./blocks/catalog-container.scss";
 @use "./blocks/catalog-wrapper.scss";
 @use "./blocks/checkbox.scss";
 @use "./blocks/comments.scss";
+@use "./blocks/compare-slider.scss";
 @use "./blocks/contacts.scss";
 @use "./blocks/container.scss";
 @use "./blocks/copyright.scss";
 @use "./blocks/example.scss";
-@use "./blocks/form-container.scss";
 @use "./blocks/gift-promo.scss";
 @use "./blocks/input.scss";
 @use "./blocks/link.scss";
 @use "./blocks/location.scss";
 @use "./blocks/logo.scss";
-@use "./blocks/main-container.scss";
 @use "./blocks/main-footer.scss";
 @use "./blocks/main-header.scss";
 @use "./blocks/main-nav.scss";
@@ -40,3 +38,4 @@
 @use "./blocks/radiobutton.scss";
 @use "./blocks/social.scss";
 @use "./blocks/text-wrapper.scss";
+@use "./blocks/title-decorate.scss";

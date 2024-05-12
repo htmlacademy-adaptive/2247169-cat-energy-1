@@ -2,8 +2,25 @@
 
 .owner-details {
   margin: 0;
-  padding: 26px 0 24px;
+  padding: 27px 0 24px;
   border: none;
+  position: relative;
+
+  @media (max-width: variables.$mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #d9d9d9;
+      height: 1px;
+      left: calc(50% - 50vw);
+      top: 0;
+      width: 100vw;
+    }
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
+  }
 }
 
 .owner-details__title {
@@ -21,6 +38,10 @@
 .owner-details__wrapper {
   display: grid;
   gap: 14px;
+
+  @media (min-width: variables.$tablet-width) {
+    gap: 20px;
+  }
 
   @media (min-width: variables.$desktop-width) {
     display: grid;

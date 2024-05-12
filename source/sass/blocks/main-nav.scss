@@ -18,15 +18,17 @@
   }
 }
 
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 0;
-  width: 24px;
-  height: 2px;
-  background-color: #000000;
-  box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+.main-nav--closed .main-nav__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -1px;
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+    box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+  }
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -49,18 +51,44 @@
   }
 }
 
-.main-nav--opened .main-nav__wrapper {
-  position: absolute;
-  top: 65px;
-  right: 0;
-  left: 0;
-  z-index: 10;
-  background-color: #ffffff;
-}
+.main-nav {
+  &--closed {
+    .main-nav__item {
+      @media (max-width: variables.$mobile-width-only) {
+        display: none;
+      }
+    }
+  }
 
-.main-nav--closed .main-nav__item {
-  @media (max-width: variables.$mobile-width-only) {
-    display: none;
+  &--opened {
+    .main-nav__wrapper {
+      position: absolute;
+      top: 65px;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      background-color: #ffffff;
+    }
+  }
+
+  &--nojs {
+    .main-nav__item {
+      display: block;
+      border-top: none;
+    }
+
+    .main-nav__item:last-child {
+      border-bottom: none;
+    }
+
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .main-nav__wrapper {
+      position: static;
+      min-height: 0;
+    }
   }
 }
 
@@ -101,30 +129,26 @@
   text-align: center;
   padding-top: 22px;
   padding-bottom: 24px;
+  border-top: 1px solid #e6e6e6;
+
+  &:last-child {
+    border-bottom: 1px solid #e6e6e6;
+
+    @media (min-width: variables.$tablet-width) {
+      border: none;
+    }
+  }
 
   @media (min-width: variables.$tablet-width) {
-    padding: 0 0 10px 0;
+    border: none;
+    padding: 0 0 10px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 0 8px 0;
+    padding: 0 0 12px;
 
     &--current {
       border-bottom: 2px solid #ffffff;
     }
   }
-}
-
-/*If JS hasn't loaded*/
-.main-nav--nojs .main-nav__toggle {
-  display: none;
-}
-
-.main-nav--nojs .main-nav__wrapper {
-  position: static;
-  min-height: 0;
-}
-
-.main-nav--nojs .main-nav__item {
-  display: block;
 }

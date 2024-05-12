@@ -2,19 +2,23 @@
 @use "../utils/variables.scss";
 
 .product-card {
-  padding: 20px 0 20px;
+  padding: 20px 0 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "image info"
     "button button";
-  border-bottom: 1px solid #ebebeb;
+  position: relative;
 
-  &:first-child {
-    border-top: 1px solid #ebebeb;
-
-    @media (min-width: variables.$tablet-width) {
-      border-top: none;
+  @media (max-width: variables.$mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #ebebeb;
+      height: 1px;
+      left: calc(50% - 50vw);
+      top: 0;
+      width: 100vw;
     }
   }
 
@@ -28,15 +32,20 @@
       "info"
       "button";
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 10px 38px 40px;
+  }
 }
 
 .product-card__image {
+  margin: 0 0 15px;
   align-self: center;
   justify-self: center;
   grid-area: image;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 0 20px;
+    margin: 0 0 22px;
     width: 200px;
     height: 210px;
     display: flex;
@@ -44,8 +53,8 @@
     justify-content: center;
   }
 
-  @media (min-width: variables.$tablet-width) {
-    margin: 0 0 20px;
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 12px;
     width: 169px;
   }
 }
@@ -53,11 +62,19 @@
 .product-card__info {
   margin-bottom: 20px;
   grid-area: info;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 42px;
+  }
 }
 
 .product-card__name {
-  width: 76px;
-  margin: 0 0 14px;
+  width: 90px;
+  margin: 0 0 16px;
   font-size: 16px;
   line-height: 20px;
   color: #222222;
@@ -72,7 +89,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 auto 23px;
+    margin: 0 auto 24px;
   }
 }
 
@@ -82,13 +99,31 @@
   @media (min-width: variables.$tablet-width) {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 }
 
 .product-card__details-wrapper {
   display: flex;
   justify-content: space-between;
+  position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    &::before {
+      content: "";
+      height: 1px;
+      background-color: #cdcdcd;
+      width: 100%;
+      position: absolute;
+      bottom: -5px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::before {
+      bottom: -7px;
+    }
+  }
 }
 
 .product-card__details-item {
@@ -105,6 +140,5 @@
 }
 
 .product-card__button {
-  width: 100%;
   grid-area: button;
 }

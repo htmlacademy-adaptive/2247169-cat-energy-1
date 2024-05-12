@@ -30,20 +30,16 @@
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
-}
 
-.main-header__logo {
-  display: flex;
-  align-items: center;
-  gap: 56px;
-
-  @media (min-width: variables.$tablet-width) {
-    gap: 13px;
+  &:has(.main-nav--nojs) {
+    @media (max-width: variables.$mobile-width-only) {
+      display: block;
+    }
   }
 }
 
 .main-header__nav {
   @media (min-width: variables.$tablet-width) {
-    align-self: flex-end;
+    align-self: end;
   }
 }

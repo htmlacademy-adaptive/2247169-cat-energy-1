@@ -1,0 +1,79 @@
+@use "../utils/variables.scss";
+
+.title-decorate {
+  display: grid;
+  grid-template-columns: 1fr variables.$content-width-mobile 1fr;
+  gap: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: 1fr variables.$content-width-tablet 1fr;
+    gap: 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 1fr variables.$content-width-desktop 1fr;
+  }
+
+  &::before {
+    content: "";
+    background-color: #68b738;
+    position: relative;
+    height: 2px;
+    top: 15px;
+
+    @media (min-width: variables.$tablet-width) {
+      top: 20px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      top: 25px;
+    }
+  }
+
+  &::after {
+    content: "";
+    background-color: #68b738;
+    position: relative;
+    height: 2px;
+    top: 15px;
+
+    @media (min-width: variables.$tablet-width) {
+      top: 20px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      top: 25px;
+    }
+  }
+}
+
+.title-decorate__text {
+  display: grid;
+  grid-template-columns: fit-content(230px) 1fr;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: auto 1fr;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: auto 1fr;
+  }
+
+  &::after {
+    content: "";
+    background-color: #68b738;
+    position: relative;
+    height: 2px;
+    top: 15px;
+    left: 20px;
+
+    @media (min-width: variables.$tablet-width) {
+      top: 20px;
+      left: 40px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      top: 25px;
+    }
+  }
+}

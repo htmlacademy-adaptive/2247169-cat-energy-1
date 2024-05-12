@@ -1,0 +1,110 @@
+@use "../utils/variables.scss";
+
+.compare-slider {
+  position: relative;
+  overflow: hidden;
+  width: 280px;
+  height: 256px;
+  box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.compare-slider__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  &--after {
+    z-index: 100;
+  }
+
+  &--before {
+    width: 50%;
+    z-index: 200;
+  }
+}
+
+.compare-slider__picture img {
+  width: 280px;
+  max-width: 280px;
+  height: 100%;
+  background-color: #eaeaea;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 560px;
+    max-width: 560px;
+    height: 512px;
+    background: linear-gradient(#ffffff 151px, #eaeaea 151px);
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background: linear-gradient(#ffffff 135px, #eaeaea 135px);
+  }
+}
+
+.compare-slider__dragme {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #666666;
+  cursor: pointer;
+  z-index: 300;
+  border: none;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: #68b738;
+
+    .compare-slider__arrow {
+      border-color: #68b738;
+      color: #68b738;
+    }
+  }
+
+  &:active {
+    background-color: rgba(94, 170, 47, 0.6);
+
+    .compare-slider__arrow {
+      border-color: rgba(94, 170, 47, 0.6);
+      color: rgba(94, 170, 47, 0.6);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid #68b738;
+
+    .compare-slider__arrow {
+      outline: 2px solid #68b738;
+    }
+  }
+}
+
+.compare-slider__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #ffffff;
+  color: #666666;
+  border: 2px solid #666666;
+  cursor: pointer;
+  z-index: 300;
+}

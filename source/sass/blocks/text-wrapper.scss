@@ -2,6 +2,19 @@
 
 .text-wrapper {
   padding-top: 27px;
+  position: relative;
+
+  @media (max-width: variables.$mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #d9d9d9;
+      height: 1px;
+      left: calc(50% - 50vw);
+      top: 0;
+      width: 100vw;
+    }
+  }
 
   @media (min-width: variables.$tablet-width) {
     padding-top: 65px;
@@ -18,9 +31,13 @@
   line-height: 36px;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 0 55px 0;
+    margin: 0 0 54px 0;
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 55px 0;
   }
 }
 

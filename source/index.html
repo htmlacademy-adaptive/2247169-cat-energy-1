@@ -5,7 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -63,10 +69,10 @@
           <source media="(min-width: 1440px)"
             srcset="img/index-promo/promo-image-desktop.png 1x, img/index-promo/promo-image-desktop@2x.png 2x" width="552" height="500">
           <source media="(min-width: 768px)"
-            srcset="img/index-promo/promo-image-tablet.png 1x, img/index-promo/promo-image-tablet@2x.png 2x," width="709" height="609">
+            srcset="img/index-promo/promo-image-tablet.png 1x, img/index-promo/promo-image-tablet@2x.png 2x" width="709" height="609">
           <img src="img/index-promo/promo-image.png" srcset="img/index-promo/promo-image@2x.png 2x" alt="Упаковка питания с курицей" width="280" height="270">
         </picture>
-        <a class="promo__button button-common button-common--index" href="form.html">подобрать программу</a>
+        <a class="promo__button button-common button-common--size-medium" href="form.html">подобрать программу</a>
       </div>
     </section>
 
@@ -78,21 +84,13 @@
             <h3 class="programs__title">Похудение</h3>
             <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
               Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="programs__link" href="#">каталог slim
-            <svg class="programs__link-icon" width="24" height="12">
-              <use href="img/sprite.svg#arrow"></use>
-            </svg>
-            </a>
+            <a class="programs__link" href="catalog.html">каталог slim</a>
           </li>
           <li class="programs__item programs__item--pro">
             <h3 class="programs__title">Набор массы</h3>
             <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
               Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="programs__link" href="#">каталог pro
-              <svg class="programs__link-icon" width="24" height="12">
-                <use href="img/sprite.svg#arrow"></use>
-              </svg>
-            </a>
+            <a class="programs__link" href="catalog.html">каталог pro</a>
           </li>
         </ul>
       </div>
@@ -135,19 +133,22 @@
           <div class="example__data">
             <dl class="example__list">
               <div class="example__item">
-                <dt class="example__details">снижение веса</dt>
+                <dt class="example__details example__details--weightloss">снижение веса</dt>
                 <dd class="example__number">5 КГ</dd>
               </div>
               <div class="example__item">
-                <dt class="example__details">затрачено времени</dt>
+                <dt class="example__details example__details--time">затрачено времени</dt>
                 <dd class="example__number">60 ДНЕЙ</dd>
               </div>
             </dl>
-            <p class="example__result">Затраты на питание: 15 000 РУБ. </p>
+            <p class="example__result">
+              <span>Затраты на питание:</span>
+              <span>15 000 РУБ.</span>
+            </p>
           </div>
         </div>
         <div class="compare-slider">
-          <picture>
+          <picture class="compare-slider__picture compare-slider__picture--before">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/index-example/cat-slider-before-tablet.webp 1x, img/index-example/cat-slider-before-tablet@2x.webp 2x" width="560" height="512">
             <source type="image/webp" srcset="img/index-example/cat-slider-before.webp 1x, img/index-example/cat-slider-before@2x.webp 2x" width="280" height="256">
 
@@ -155,14 +156,21 @@
             srcset="img/index-example/cat-slider-before-tablet.png 1x, img/index-example/cat-slider-before-tablet@2x.png 2x" width="560" height="512">
             <img src="./img/index-example/cat-slider-before.png" srcset="img/index-example/cat-slider-before@2x.png 2x" alt="Полный кот" width="280" height="256">
           </picture>
-          <picture>
+          <picture class="compare-slider__picture compare-slider__picture--after">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/index-example/cat-slider-after-tablet.webp 1x, img/index-example/cat-slider-after-tablet@2x.webp 2x" width="560" height="512">
             <source type="image/webp" srcset="img/index-example/cat-slider-after.webp 1x, img/index-example/cat-slider-after@2x.webp 2x" width="280" height="256">
 
             <source media="(min-width: 768px)"
-            srcset="img/index-example/cat-slider-after-tablet.png 1x, img/index-example/cat-slider-after-tablet@2x.png 2x," width="560" height="512">
+            srcset="img/index-example/cat-slider-after-tablet.png 1x, img/index-example/cat-slider-after-tablet@2x.png 2x" width="560" height="512">
             <img src="./img/index-example/cat-slider-after.png" srcset="img/index-example/cat-slider-after@2x.png 2x" alt="Худой кот" width="280" height="256">
           </picture>
+          <button class="compare-slider__dragme">
+            <span class="compare-slider__arrow">
+              <svg width="24" height="18">
+                <use href="img/sprite.svg#arrow-example"></use>
+              </svg>
+            </span>
+          </button>
         </div>
       </div>
     </section>
@@ -173,22 +181,15 @@
     <div class="main-footer__wrapper">
       <div class="main-footer__contacts contacts contacts--index">
         <div class="contacts__container">
-          <h3 class="contacts__title">приглашаем к сотрудничеству дилеров!</h3>
+          <h3 class="contacts__title">приглашаем к сотрудничеству дилеров!</h3>
           <p class="contacts__text">ул. Большая
             Конюшенная, д. 19/8 <span class="contacts__small-text">Санкт-Петербург</span></p>
         </div>
       </div>
-      <div class="main-footer__location location">
-        <iframe class="location__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
-        width="766"
-        height="560"
-        allowfullscreen
-        title="Адрес магазина ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
-      ></iframe>
-      </div>
+      <div class="main-footer__location location" id="map"></div>
       <div class="main-footer__details container">
         <div class="main-footer__logo logo">
-          <a class="logo__link-text" href="#">
+          <a class="logo__link-text" href="index.html">
             <img class="logo__text" src="img/logo-text.svg" alt="Логотип Кот Энерджи" width="128" height="24">
           </a>
         </div>
@@ -221,8 +222,8 @@
           </ul>
         </div>
         <div class="main-footer__copyright copyright">
-          <a class="copyright__text" href="#">HTML Academy</a>
-          <a class="copyright__link" href="#">
+          <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg width="27" height="34">
               <use href="img/sprite.svg#htmlacademy"></use>
             </svg>
@@ -232,6 +233,7 @@
     </div>
   </footer>
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=3f524e05-e9f4-4d7f-8e5e-bb796b534e96" type="text/javascript"></script>
   <script src="js/script.js"></script>
 </body>
 

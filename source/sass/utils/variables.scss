@@ -1,6 +1,10 @@
-$main-font: "Oswald";
-$additional-font: "Lato";
+$main-font: "Oswald", sans-serif;
+$additional-font: "Lato", sans-serif;
 $main-color: #000000;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-width-only: 767px;
+$tablet-width-only: 1439px;
+$content-width-mobile: 280px;
+$content-width-tablet: 630px;
+$content-width-desktop: 1220px;

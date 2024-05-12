@@ -1,7 +1,7 @@
 @use "../utils/variables.scss";
 
 .additions-card {
-  padding: 13px 0 19px;
+  padding: 12px 0 19px;
   border-bottom: 1px solid #cdcdcd;
 
   @media (min-width: variables.$tablet-width) {
@@ -19,11 +19,11 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    padding: 26px 38px 28px;
+    padding: 25px 38px 27px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 15px 0 15px;
+    padding: 15px 0 16px;
     display: grid;
     grid-template-columns: 1fr 244px;
     gap: 40px;
@@ -67,13 +67,13 @@
   justify-content: space-between;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 3px 0 0;
     gap: 55px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0;
+    margin-top: 5px;
     gap: 0;
-    justify-content: start;
   }
 }
 
@@ -95,8 +95,6 @@
 }
 
 .additions-card__button {
-  width: 100%;
-
   @media (min-width: variables.$desktop-width) {
     width: 245px;
   }

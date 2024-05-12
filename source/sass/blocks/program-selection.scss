@@ -4,11 +4,23 @@
 .program-selection {
   display: flex;
   align-items: center;
-  margin: 0;
   padding: 22px 0 19px;
+  position: relative;
+
+  @media (max-width: variables.$mobile-width-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #d9d9d9;
+      height: 1px;
+      left: calc(50% - 50vw);
+      top: 0;
+      width: 100vw;
+    }
+  }
 
   @media (min-width: variables.$tablet-width) {
-    padding-left: 27px;
+    padding: 22px 0 26px 26px;
     border: 1px solid #e7e7e7;
   }
 }

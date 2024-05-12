@@ -1,23 +1,41 @@
 @use "../utils/variables.scss";
 
 .radiobutton {
-  padding-left: 45px;
   display: flex;
+  gap: 15px;
+  align-items: center;
   position: relative;
   cursor: pointer;
 
+  &:has(.radiobutton__input:focus-visible) {
+    outline: 2px solid #68b738;
+    outline-offset: 2px;
+  }
+
   @media (min-width: variables.$tablet-width) {
-    padding-left: 60px;
+    gap: 20px;
   }
 }
 
 .radiobutton__input {
   margin: 0;
   width: 30px;
+
+  &:hover:not(:disabled) ~ .radiobutton__mark {
+    border-color: #bababa;
+  }
+
+  &:disabled ~ .radiobutton__mark {
+    opacity: 0.3;
+  }
+
+  &:disabled ~ .radiobutton__text {
+    opacity: 0.3;
+  }
 }
 
 .radiobutton__mark {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 30px;
@@ -25,6 +43,7 @@
   border: 1px solid #cdcdcd;
   border-radius: 50%;
   box-sizing: border-box;
+  flex-shrink: 0;
 
   @media (min-width: variables.$tablet-width) {
     width: 40px;
@@ -51,7 +70,6 @@
 }
 
 .radiobutton__text {
-  padding: 6px 0;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
