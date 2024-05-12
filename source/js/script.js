@@ -18,17 +18,11 @@ navToggle.addEventListener('click', function () {
 // Compare slider
 const compareSlider = document.querySelector('.compare-slider');
 const beforeContainer = document.querySelector('.compare-slider__picture--before');
-const beforeImage = document.querySelector('.compare-slider__image--before');
 const sliderHandle = document.querySelector('.compare-slider__dragme');
 const body = document.body;
 
   if (compareSlider) {
     let isActive = false;
-
-    document.addEventListener('DOMContentLoaded', () => {
-      let width = compareSlider.offsetWidth;
-      beforeImage.style.width = `${width}px`;
-    });
 
     sliderHandle.addEventListener('mousedown', () => {
       isActive = true;
@@ -105,7 +99,7 @@ const body = document.body;
 
   if(form) {
     form.addEventListener('submit', function (e) {
-      for (let i = 0; i < inputs.length; i++) {
+      for (let i = inputs.length - 1; i >= 0; i--) {
         if ((inputs[i].id != 'age') && (inputs[i].id != 'commentaries')) {
           if ((!inputs[i].value)) {
             inputs[i].classList.add('input__control--error');
@@ -171,14 +165,14 @@ ymaps.ready(function () {
   if (document.body.clientWidth < 768) {
     options = {
     iconLayout: 'default#image',
-    iconImageHref: '/img/pin.svg',
+    iconImageHref: './img/pin.svg',
     iconImageSize: [48, 60],
     iconImageOffset: [-30, -45]
   };
   } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1440) {
     options = {
       iconLayout: 'default#image',
-      iconImageHref: '/img/pin.svg',
+      iconImageHref: './img/pin.svg',
       iconImageSize: [80, 106],
       iconImageOffset: [-55, -105]
     };
@@ -186,7 +180,7 @@ ymaps.ready(function () {
     myMap.setCenter([59.938797, 30.319902]);
     options = {
       iconLayout: 'default#image',
-      iconImageHref: '/img/pin.svg',
+      iconImageHref: './img/pin.svg',
       iconImageSize: [80, 106],
       iconImageOffset: [-55, -105]
     };

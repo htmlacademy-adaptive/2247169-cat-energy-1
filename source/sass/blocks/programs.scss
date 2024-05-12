@@ -35,45 +35,45 @@
   background-color: #f2f2f2;
   box-sizing: border-box;
 
+  &--slim {
+    background-image: url("../img/index-programs/cat_slim.svg");
+    background-repeat: no-repeat;
+    background-position: 20px 21px;
+
+    @media (min-width: variables.$tablet-width) {
+      background-image: url("../img/index-programs/cat-slim-tablet.svg");
+      background-position: 445px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      background-image: url("../img/index-programs/cat-slim-desktop.svg");
+      background-position: 52px 43px;
+    }
+  }
+
+  &--pro {
+    background-image: url("../img/index-programs/cat_pro.svg");
+    background-repeat: no-repeat;
+    background-position: 12px 24px;
+
+    @media (min-width: variables.$tablet-width) {
+      background-image: url("../img/index-programs/cat-pro-tablet.svg");
+      background-position-x: 411px;
+      background-position-y: 91px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      background-image: url("../img/index-programs/cat-pro-desktop.svg");
+      background-position: 33px 49px;
+    }
+  }
+
   @media (min-width: variables.$tablet-width) {
     padding: 78px 316px 55px 53px;
   }
 
   @media (min-width: variables.$desktop-width) {
     padding: 78px 61px 56px 52px;
-  }
-}
-
-.programs__item--slim {
-  background-image: url("../img/index-programs/cat_slim.svg");
-  background-repeat: no-repeat;
-  background-position: 20px 21px;
-
-  @media (min-width: variables.$tablet-width) {
-    background-image: url("../img/index-programs/cat-slim-tablet.svg");
-    background-position: 445px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    background-image: url("../img/index-programs/cat-slim-desktop.svg");
-    background-position: 52px 43px;
-  }
-}
-
-.programs__item--pro {
-  background-image: url("../img/index-programs/cat_pro.svg");
-  background-repeat: no-repeat;
-  background-position: 12px 24px;
-
-  @media (min-width: variables.$tablet-width) {
-    background-image: url("../img/index-programs/cat-pro-tablet.svg");
-    background-position-x: 411px;
-    background-position-y: 91px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    background-image: url("../img/index-programs/cat-pro-desktop.svg");
-    background-position: 33px 49px;
   }
 }
 
@@ -132,6 +132,7 @@
   &:hover {
     background-image: url("../img/arrow-hover.svg");
     background-position: right center;
+    transition: all 0.2s ease-out;
   }
 
   &:active {
@@ -142,8 +143,14 @@
     }
   }
 
+  &:focus-visible {
+    outline: 2px solid #68b738;
+    outline-offset: 2px;
+  }
+
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-right: 60px;
   }
 }

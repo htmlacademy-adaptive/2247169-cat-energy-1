@@ -29,7 +29,7 @@
   }
 }
 
-.compare-slider__image {
+.compare-slider__picture img {
   width: 280px;
   max-width: 280px;
   height: 100%;
@@ -77,6 +77,14 @@
     .compare-slider__arrow {
       border-color: rgba(94, 170, 47, 0.6);
       color: rgba(94, 170, 47, 0.6);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid #68b738;
+
+    .compare-slider__arrow {
+      outline: 2px solid #68b738;
     }
   }
 }
