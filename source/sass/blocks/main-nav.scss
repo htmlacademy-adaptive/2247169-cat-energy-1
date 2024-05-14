@@ -113,7 +113,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 475px;
+    width: 476px;
   }
 }
 
@@ -128,13 +128,14 @@
     min-height: 36px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 33px;
     font-size: 18px;
     line-height: 24px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 475px;
+    width: 476px;
     font-size: 20px;
     line-height: 30px;
   }

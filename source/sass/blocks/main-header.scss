@@ -25,6 +25,7 @@
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 
   &:has(.main-nav--nojs) {
     @media (max-width: variables.$mobile-width-only) {
@@ -35,6 +36,6 @@
 
 .main-header__nav {
   @media (min-width: variables.$tablet-width) {
-    align-self: end;
+    padding: 15px 0;
   }
 }

@@ -74,7 +74,7 @@
 
   @media (min-width: variables.$desktop-width) {
     justify-items: start;
-    align-items: center;
+    align-items: start;
     grid-template-columns: 420px 1fr;
     grid-template-rows: min-content min-content 1fr;
     grid-template-areas:
@@ -93,7 +93,7 @@
   grid-area: title;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 65px 0 40px 90px;
+    margin: 50px 0 40px 90px;
     width: 420px;
     font-size: 60px;
     line-height: 60px;
@@ -125,7 +125,6 @@
 
 .promo__image {
   grid-area: image;
-  align-self: start;
 
   @media (min-width: variables.$tablet-width) {
     margin-top: -85px;
