@@ -51,6 +51,10 @@
   display: grid;
   grid-template-columns: fit-content(230px) 1fr;
 
+  &--long-text {
+    grid-template-columns: fit-content(185px) 1fr;
+  }
+
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: auto 1fr;
   }

@@ -38,6 +38,16 @@
   }
 }
 
+.product-card__image-link {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+
+  @media (min-width: variables.$tablet-width) {
+    align-self: start;
+  }
+}
+
 .product-card__image {
   margin: 0 0 15px;
   align-self: center;
@@ -72,11 +82,16 @@
   }
 }
 
+.product-card__info-link {
+  @include mixins.link-reset;
+}
+
 .product-card__name {
   width: 90px;
   margin: 0 0 16px;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   color: #222222;
   text-transform: uppercase;
 
@@ -141,4 +156,5 @@
 
 .product-card__button {
   grid-area: button;
+  align-self: end;
 }

@@ -14,9 +14,9 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="page__body">
+<body class="page__body page-content page-content--index">
 
-  <header class="main-header main-header--index">
+  <header class="main-header page-content__header">
     <div class="main-header__wrapper container">
       <div class="main-header__logo logo">
         <a class="logo__link-img" href="index.html">
@@ -57,7 +57,7 @@
     </div>
   </header>
 
-  <main class="main-container">
+  <main class="main-container page-content__main">
     <h1 class="visually-hidden">Функциональное
       питание для котов</h1>
     <section class="promo">
@@ -166,7 +166,8 @@
           </picture>
           <button class="compare-slider__dragme">
             <span class="compare-slider__arrow">
-              <svg width="24" height="18">
+              <span class="visually-hidden">Кнопка слайдера сравнения котов до/после</span>
+              <svg aria-hidden="true" width="24" height="18">
                 <use href="img/sprite.svg#arrow-example"></use>
               </svg>
             </span>

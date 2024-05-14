@@ -17,11 +17,11 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    padding-top: 65px;
+    padding-top: 50px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-top: 75px;
+    padding-top: 62px;
   }
 }
 
@@ -29,6 +29,7 @@
   margin: 0 0 37px 0;
   font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
 
   @media (min-width: variables.$tablet-width) {
     margin: 0 0 54px 0;
