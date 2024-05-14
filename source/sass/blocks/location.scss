@@ -6,8 +6,30 @@
   border: none;
   display: block;
   height: 362px;
+  background-image: url("../img/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map@2x.png");
+  }
 
   @media (min-width: variables.$tablet-width) {
     height: 400px;
+    background-image: url("../img/map-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    height: 400px;
+    background-image: url("../img/map-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.png");
+    }
   }
 }

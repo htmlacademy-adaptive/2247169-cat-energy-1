@@ -15,16 +15,11 @@
   @media (min-width: variables.$desktop-width) {
     min-height: 59px;
     padding-top: 55px;
-
-    &--index {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      padding-bottom: 0;
-      z-index: 1;
-    }
   }
+}
+
+.main-header__logo {
+  align-self: flex-start;
 }
 
 .main-header__wrapper {

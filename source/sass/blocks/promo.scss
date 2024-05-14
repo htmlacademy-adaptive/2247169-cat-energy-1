@@ -125,6 +125,7 @@
 
 .promo__image {
   grid-area: image;
+  align-self: start;
 
   @media (min-width: variables.$tablet-width) {
     margin-top: -85px;

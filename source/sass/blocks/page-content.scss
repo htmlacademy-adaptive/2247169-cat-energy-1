@@ -1,0 +1,19 @@
+@use "../utils/variables.scss";
+
+.page-content--index {
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+
+    .page-content__header {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      z-index: 2;
+      align-self: start;
+    }
+
+    .page-content__main {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+    }
+  }
+}
